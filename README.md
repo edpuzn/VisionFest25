@@ -1,4 +1,4 @@
-# zirve
+# VisionFest2025
 
 ## Project setup
 ```

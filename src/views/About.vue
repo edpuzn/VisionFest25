@@ -13,25 +13,9 @@
           
           <h2>Vizyonumuz</h2>
           <p>Türkiye'nin yapay zeka alanındaki potansiyelini ortaya çıkarmak ve uluslararası arenada söz sahibi olmasını sağlamak.</p>
-          
-          <h2>Değerlerimiz</h2>
-          <div class="values-grid">
-            <div class="value-card">
-              <i class="fas fa-lightbulb"></i>
-              <h3>Yenilikçilik</h3>
-              <p>Yapay zeka alanındaki en son gelişmeleri takip eder ve uygularız.</p>
-            </div>
-            <div class="value-card">
-              <i class="fas fa-users"></i>
-              <h3>İşbirliği</h3>
-              <p>Akademi, endüstri ve öğrenciler arasında güçlü bağlar kurarız.</p>
-            </div>
-            <div class="value-card">
-              <i class="fas fa-graduation-cap"></i>
-              <h3>Eğitim</h3>
-              <p>Yapay zeka alanında kaliteli eğitim ve öğrenme fırsatları sunarız.</p>
-            </div>
-          </div>
+
+           
+        
         </div>
       </div>
     </div>

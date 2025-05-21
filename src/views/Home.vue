@@ -10,7 +10,7 @@
       <div class="container">
         <h1>FIRAT VISION FEST 2025</h1>
         <p class="date">29 Mayıs 2025 | FIRAT ÜNİVERSİTESİ</p>
-         
+
         <div class="countdown">
           <div class="countdown-item">
             <span class="number">{{ days }}</span>
@@ -30,8 +30,11 @@
           </div>
         </div>
 
-        <p class="cta-text">Aramızda sizi de görmek isteriz.</p>
-        <a href="https://linktr.ee/hsdfirat" class="cta-button" target="_blank">Linktr.ee/hsdfirat</a>
+        <div class="cta-section">
+          <p class="cta-text">Geleceğin Teknolojilerini Keşfetmeye Hazır mısınız?</p>
+          <div class="cta-spacer"></div>
+          <a href="https://linktr.ee/hsdfirat" class="cta-button" target="_blank">BAŞVUR</a>
+        </div>
       </div>
     </section>
 
@@ -40,14 +43,20 @@
         <h2>FIRAT VISION FEST NEDİR?</h2>
         <div class="about-content">
           <div class="about-text">
-            <p>AI Summit, yapay zeka teknolojilerinin tüm yönleriyle ele alındığı, alanında uzman konuşmacıların katılımıyla gerçekleşen önemli bir teknoloji zirvesidir. 2025 yılında "Makineler Düşünebilir mi?" temasıyla Atatürk Üniversitesi'nde düzenlenecek olan etkinlik, yapay zeka alanındaki son gelişmeleri, uygulamaları ve etik konuları masaya yatıracak.</p>
-            <p>İki gün sürecek etkinlikte, akademisyenler, sektör temsilcileri ve öğrenciler bir araya gelerek yapay zeka teknolojilerinin geleceğini tartışacak, yeni fikirler üretecek ve işbirlikleri geliştirecekler.</p>
+            <div class="about-card">
+              <i class="fas fa-robot"></i>
+              <p>AI Summit, yapay zeka teknolojilerinin tüm yönleriyle ele alındığı, alanında uzman konuşmacıların katılımıyla gerçekleşen önemli bir teknoloji zirvesidir. 2025 yılında "Makineler Düşünebilir mi?" temasıyla Atatürk Üniversitesi'nde düzenlenecek olan etkinlik, yapay zeka alanındaki son gelişmeleri, uygulamaları ve etik konuları masaya yatıracak.</p>
+            </div>
+            <div class="about-card">
+              <i class="fas fa-users"></i>
+              <p>İki gün sürecek etkinlikte, akademisyenler, sektör temsilcileri ve öğrenciler bir araya gelerek yapay zeka teknolojilerinin geleceğini tartışacak, yeni fikirler üretecek ve işbirlikleri geliştirecekler.</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="features">
+    <section class="why-attend">
       <div class="container">
         <h2>Neden Katılmalısınız?</h2>
         <div class="features-grid">
@@ -57,7 +66,7 @@
             <p>Alanında uzman konuşmacılardan yapay zeka teknolojilerinin en son gelişmelerini dinleyin.</p>
           </div>
           <div class="feature-card">
-            <i class="fas fa-handshake"></i>
+            <i class="fas fa-network-wired"></i>
             <h3>Networking</h3>
             <p>Akademisyenler, sektör temsilcileri ve öğrencilerle tanışma ve işbirliği fırsatı yakalayın.</p>
           </div>
@@ -217,7 +226,7 @@ export default {
 
 .hero {
   position: relative;
-  background: #000000;
+  background: #822439;
   color: white;
   text-align: center;
   padding: 200px 0;
@@ -245,7 +254,7 @@ export default {
 .gradient-sphere:nth-child(1) {
   width: 700px;
   height: 700px;
-  background: radial-gradient(circle, rgba(74, 144, 226, 0.8) 0%, rgba(74, 144, 226, 0.2) 50%, transparent 70%);
+  background: radial-gradient(circle, rgba(130, 36, 57, 0.8) 0%, rgba(130, 36, 57, 0.2) 50%, transparent 70%);
   top: -200px;
   left: -100px;
   animation-delay: 0s;
@@ -254,7 +263,7 @@ export default {
 .gradient-sphere:nth-child(2) {
   width: 600px;
   height: 600px;
-  background: radial-gradient(circle, rgba(47, 60, 78, 0.8) 0%, rgba(47, 60, 78, 0.2) 50%, transparent 70%);
+  background: radial-gradient(circle, rgba(100, 20, 40, 0.8) 0%, rgba(100, 20, 40, 0.2) 50%, transparent 70%);
   top: 50%;
   right: -100px;
   animation-delay: -5s;
@@ -263,7 +272,7 @@ export default {
 .gradient-sphere:nth-child(3) {
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, rgba(26, 31, 43, 0.8) 0%, rgba(26, 31, 43, 0.2) 50%, transparent 70%);
+  background: radial-gradient(circle, rgba(80, 15, 30, 0.8) 0%, rgba(80, 15, 30, 0.2) 50%, transparent 70%);
   bottom: -100px;
   left: 30%;
   animation-delay: -10s;
@@ -291,30 +300,51 @@ export default {
 }
 
 h1 {
-  font-size: 3.2rem;
-  font-weight: 700;
+  font-size: 4.5rem;
+  font-weight: 800;
   margin-bottom: 15px;
   text-transform: uppercase;
   opacity: 0;
   transform: translateY(30px);
   animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
   font-family: 'Poppins', sans-serif;
+  background: linear-gradient(45deg, #fff, rgba(255, 255, 255, 0.8));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+  letter-spacing: 4px;
+  position: relative;
+  display: inline-block;
+}
+
+h1::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
 }
 
 .date {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   margin-bottom: 30px;
   font-weight: 300;
   opacity: 0;
   transform: translateY(30px);
   animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.2s forwards;
   font-family: 'Poppins', sans-serif;
+  color: rgba(255, 255, 255, 0.9);
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .countdown {
   display: flex;
   justify-content: center;
-  gap: 25px;
+  gap: 40px;
   margin-bottom: 35px;
   opacity: 0;
   transform: translateY(30px);
@@ -323,25 +353,20 @@ h1 {
 
 .countdown-item {
   text-align: center;
-  background: rgba(255, 255, 255, 0.15);
-  padding: 15px 25px;
-  border-radius: 12px;
-  min-width: 100px;
-  backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
   opacity: 0;
   transform: scale(0.8);
   animation: scaleIn 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  position: relative;
+  min-width: 100px;
 }
 
 .countdown-item .number {
-  font-size: 2.5rem;
-  font-weight: 700;
+  font-size: 4rem;
+  font-weight: 600;
   display: block;
-  margin-bottom: 5px;
   font-family: 'Poppins', sans-serif;
   color: #fff;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  line-height: 1;
 }
 
 .countdown-item .label {
@@ -349,53 +374,79 @@ h1 {
   text-transform: uppercase;
   font-weight: 400;
   font-family: 'Poppins', sans-serif;
-  color: rgba(255, 255, 255, 0.9);
-  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 2px;
+  margin-top: 8px;
+}
+
+.cta-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
 }
 
 .cta-text {
-  font-size: 1.3rem;
-  margin-bottom: 15px;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
   font-weight: 300;
   opacity: 0;
   transform: translateY(30px);
   animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) 1s forwards;
   font-family: 'Poppins', sans-serif;
+  color: rgba(255, 255, 255, 0.9);
+  letter-spacing: 1px;
+  position: relative;
+  display: inline-block;
+}
+
+.cta-spacer {
+  height: 60px;
+  width: 1px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), transparent);
+  margin: 20px 0;
 }
 
 .cta-button {
-  background-color: #2F3C4E;
+  background-color: transparent;
   color: white;
-  padding: 10px 25px;
-  border-radius: 25px;
+  padding: 12px 40px;
+  border-radius: 30px;
   text-decoration: none;
   font-weight: 500;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   transition: all 0.3s ease;
   display: inline-block;
-  margin-top: 15px;
   opacity: 0;
   transform: translateY(30px);
   animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) 1.2s forwards;
-  border: 2px solid #2F3C4E;
-}
-
-.cta-button:hover {
-  background-color: transparent;
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(47, 60, 78, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .about-section {
   padding: 100px 0;
-  background-color: #f8f9fa;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
   opacity: 1;
   transform: translateY(0);
+  position: relative;
+  overflow: hidden;
+}
+
+.about-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(130, 36, 57, 0.3), transparent);
 }
 
 .about-section h2 {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
   color: #2F3C4E;
   font-size: 2.5rem;
   font-weight: 700;
@@ -403,17 +454,62 @@ h1 {
   opacity: 1;
   transform: translateY(0);
   font-family: 'Poppins', sans-serif;
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.about-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #822439, #c41e3a);
+  border-radius: 3px;
 }
 
 .about-content {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
   opacity: 1;
   transform: translateY(0);
 }
 
-.about-text p {
+.about-text {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.about-card {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(130, 36, 57, 0.1);
+}
+
+.about-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.about-card i {
+  font-size: 2.5rem;
+  color: #822439;
   margin-bottom: 20px;
+  display: block;
+}
+
+.about-card p {
+  margin: 0;
   line-height: 1.8;
   color: #2F3C4E;
   font-size: 1.1rem;
@@ -421,18 +517,14 @@ h1 {
   font-family: 'Poppins', sans-serif;
 }
 
-.about-text p:last-child {
-  margin-bottom: 0;
-}
-
-.features {
+.why-attend {
   padding: 100px 0;
-  background-color: white;
+  background-color: #f8f9fa;
   opacity: 1;
   transform: translateY(0);
 }
 
-.features h2 {
+.why-attend h2 {
   text-align: center;
   margin-bottom: 60px;
   color: #2F3C4E;
@@ -444,38 +536,43 @@ h1 {
   font-family: 'Poppins', sans-serif;
 }
 
-.features-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 40px;
+.why-attend .features-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
   opacity: 1;
   transform: translateY(0);
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.feature-card {
+.why-attend .feature-card {
+  flex: 1;
   text-align: center;
   padding: 40px 30px;
-  background: #f8f9fa;
+  background: rgba(130, 36, 57, 0.05);
   border-radius: 15px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
   opacity: 1;
   transform: translateY(0);
+  border: 1px solid rgba(130, 36, 57, 0.1);
+  backdrop-filter: blur(10px);
 }
 
-.feature-card:hover {
+.why-attend .feature-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(74, 144, 226, 0.2);
-  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background: rgba(130, 36, 57, 0.1);
 }
 
-.feature-card i {
+.why-attend .feature-card i {
   font-size: 3rem;
-  color: #4a90e2;
+  color: #822439;
   margin-bottom: 25px;
 }
 
-.feature-card h3 {
+.why-attend .feature-card h3 {
   color: #2F3C4E;
   font-size: 1.5rem;
   margin-bottom: 15px;
@@ -483,8 +580,9 @@ h1 {
   font-family: 'Poppins', sans-serif;
 }
 
-.feature-card p {
+.why-attend .feature-card p {
   color: #2F3C4E;
+  opacity: 0.8;
   line-height: 1.8;
   font-size: 1.1rem;
   font-family: 'Poppins', sans-serif;
@@ -551,51 +649,80 @@ h1 {
   }
 
   h1 {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
   }
 
   .date {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
   }
 
   .countdown {
-    gap: 10px;
+    gap: 20px;
   }
 
   .countdown-item {
     min-width: 70px;
-    padding: 12px 15px;
   }
 
   .countdown-item .number {
-    font-size: 1.8rem;
+    font-size: 2.5rem;
   }
 
   .countdown-item .label {
     font-size: 0.8rem;
   }
 
+  .cta-section {
+    margin-top: 30px;
+  }
+
   .cta-text {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+  }
+
+  .cta-spacer {
+    height: 40px;
+    margin: 15px 0;
   }
 
   .cta-button {
-    font-size: 1rem;
-    padding: 10px 20px;
+    font-size: 1.1rem;
+    padding: 10px 30px;
   }
 
-  .about-section,
-  .features {
+  .about-section {
     padding: 60px 0;
   }
 
-  .about-section h2,
-  .features h2 {
+  .about-section h2 {
     font-size: 2rem;
   }
 
-  .features-grid {
-    grid-template-columns: 1fr;
+  .about-card {
+    padding: 30px;
+  }
+
+  .about-card i {
+    font-size: 2rem;
+  }
+
+  .about-card p {
+    font-size: 1rem;
+  }
+
+  .why-attend {
+    padding: 60px 0;
+  }
+
+  .why-attend h2 {
+    font-size: 2rem;
+  }
+
+  .why-attend .features-grid {
+    flex-direction: column;
+    gap: 20px;
   }
 }
 </style> 

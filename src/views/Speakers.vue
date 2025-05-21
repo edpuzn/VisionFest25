@@ -7,10 +7,10 @@
       <div class="speakers-grid">
         <div class="speaker-card">
           <div class="speaker-image">
-            <img src="@/assets/AhmetOktaySonRevize.jpeg" alt="Buğra AYAN" />
+            <img src="@/assets/Ahmet_Şeker.jpeg" alt="Ahmet Şeker" />
           </div>
           <div class="speaker-info">
-            <h3>Buğra AYAN</h3>
+            <h3>Ahmet ŞEKER</h3>
             <p class="title">Bilişim Uzmanı ve Akademisyen</p>
             <p class="bio">Buğra Ayan, internet teknolojileri ve yapay zeka alanlarında çalışmalar yürüten bir bilişim uzmanıdır. Yüksek lisansını Gazi Üniversitesi'nde yapay zeka üzerine tamamlamış olup, şu anda doktora çalışmalarına büyük dil modelleri ve blokzincir üzerine devam etmektedir.</p>
             <p class="bio">Ankara Üniversitesi ve Hacı Bayram Veli Üniversitesi'nde dersler vermekte; ayrıca sivil toplum kuruluşlarının kuruluş ve yönetim süreçlerinde aktif olarak yer almaktadır.</p>
@@ -20,10 +20,10 @@
 
         <div class="speaker-card">
           <div class="speaker-image">
-            <img src="@/assets/AhmetOktaySonRevize.jpeg" alt="Özcan ÇAVUŞOĞLU" />
+            <img src="@/assets/Burak_Aytan.jpeg" alt="Burak Aytan" />
           </div>
           <div class="speaker-info">
-            <h3>Özcan ÇAVUŞOĞLU</h3>
+            <h3>Burak AYTAN</h3>
             <p class="title">Endüstri Mühendisi, TOFAŞ</p>
             <p class="bio">Özcan Çavuşoğlu, İstanbul Teknik Üniversitesi Endüstri Mühendisliği Bölümü'nden mezun olmuş ve aynı üniversitede Yönetim Mühendisliği alanında yüksek lisans yapmıştır.</p>
             <p class="bio">Kariyerine AVEA İletişim Hizmetleri A.Ş.'de Organizasyon ve Kalite Uzmanı olarak başlamış; ardından Şekerbank T.A.Ş., Turkcell TL Hattı ve Koçtaş Yapı Marketleri A.Ş. gibi firmalarda süreç yönetimi ve iş geliştirme pozisyonlarında görev almıştır.</p>
@@ -33,10 +33,10 @@
 
         <div class="speaker-card">
           <div class="speaker-image">
-            <img src="@/assets/AhmetOktaySonRevize.jpeg" alt="Tanel Temel" />
+            <img src="@/assets/Can_Göymen.jpeg" alt="Can Göymen" />
           </div>
           <div class="speaker-info">
-            <h3>Tanel Temel</h3>
+            <h3>Can GÖYMEN</h3>
             <p class="title">Artiwise CEO</p>
             <p class="bio">Taner Temel, Artiwise şirketinin kurucu ortağı ve CEO'sudur. 2000 yılında Yıldız Teknik Üniversitesi Matematik Mühendisliği Bölümü'nden mezun olmuş, 2013 yılında ise Doğuş Üniversitesi'nde İngilizce İşletme (MBA) yüksek lisansını tamamlamıştır.</p>
             <p class="bio">Kariyerine yazılım firmalarında başlayan Temel, Toyota ve Turkcell Global Bilgi gibi büyük şirketlerde yazılım geliştirme mühendisliği ve yöneticilik pozisyonlarında deneyim kazanmıştır.</p>
@@ -46,10 +46,10 @@
 
         <div class="speaker-card">
           <div class="speaker-image">
-            <img src="@/assets/AhmetOktaySonRevize.jpeg" alt="Ahmet OKTAY" />
+            <img src="@/assets/Kaan_Yeniyol.jpeg" alt="Kaan Yeniyol" />
           </div>
           <div class="speaker-info">
-            <h3>Ahmet OKTAY</h3>
+            <h3>Kaan YENİYOL</h3>
             <p class="title">Teknoloji ve İnovasyon Lideri</p>
             <p class="bio">Ahmet Oktay, Doğu Akdeniz Üniversitesi Bilgisayar Mühendisliği Bölümü'nden mezun olmuş; teknoloji ve inovasyon dünyasında stratejik danışmanlık hizmetleriyle öne çıkan bir liderdir.</p>
             <p class="bio">Alzmir Hub ve BSP Group gibi öncü kuruluşlarla iş birliği yaparak yapay zeka stratejileri ve dijital dönüşüm projelerinde önemli roller üstlenmektedir.</p>
@@ -59,10 +59,10 @@
 
         <div class="speaker-card">
           <div class="speaker-image">
-            <img src="@/assets/AhmetOktaySonRevize.jpeg" alt="Abdurrahman Bulut" />
+            <img src="@/assets/Kübra_Bilgic.jpeg" alt="Kübra Bilgic" />
           </div>
           <div class="speaker-info">
-            <h3>Abdurrahman Bulut</h3>
+            <h3>Kübra BİLGİC</h3>
             <p class="title">Teknoloji Danışmanı, eski Microsoft Yöneticisi</p>
             <p class="bio">Abdurrahman Bulut, 1990 yılında ODTÜ Elektronik Mühendisliği Bölümü'nden mezun olmuştur. 30 yıllık bilgi teknolojileri kariyerinin 20 yılını yurt dışında geçirmiştir. 8 yıl Kanada'da çeşitli şirketlerde, son 12 yıl ise Suudi Arabistan'da Microsoft'ta çalışmıştır.</p>
             <p class="bio">Microsoft'taki son görevi, Suudi Arabistan Batı Bölgesi Projeler Koordinatörlüğü'dür. 2020 Ekim itibarıyla kesin dönüş yapmış; teknoloji felsefesi ve yaşadığımız çağa tanıklık etme çerçevesinde okuma, düşünme ve paylaşma üzerine çalışmalara yoğunlaşmıştır.</p>
@@ -72,10 +72,10 @@
 
         <div class="speaker-card">
           <div class="speaker-image">
-            <img src="@/assets/AhmetOktaySonRevize.jpeg" alt="İlhan Yılmaz" />
+            <img src="@/assets/Murat_Celik.jpeg" alt="Murat Celik" />
           </div>
           <div class="speaker-info">
-            <h3>İlhan Yılmaz</h3>
+            <h3>Murat ÇELİK</h3>
             <p class="title">Monster Notebook ve Semruk Games Kurucusu</p>
             <p class="bio">İlhan Yılmaz, Marmara Üniversitesi'nden 1996 yılında mezun oldu. 2000 yılında Meryem Yılmaz ile birlikte Fokus Bilgisayar'ı kurdu. Firma, ilk yıllarında teknoloji firmalarına toptan bilgisayar malzemeleri satışı yapıyordu. 2005 yılında ise Monster Notebook markası doğdu ve firmanın ilk bilgisayarları üretilip satılmaya başlandı.</p>
             <p class="bio">Bugün gelinen noktada Monster Notebook, Türkiye'de oyun bilgisayarı pazarında ilk 3 sırada yer alıyor. İstanbul, Ankara ve İzmir'deki mağazalarıyla ve Monster Notebook Dijital Mağazası ile Türkiye'nin her noktasındaki son kullanıcıya ulaşıyor.</p>
@@ -85,27 +85,14 @@
 
         <div class="speaker-card">
           <div class="speaker-image">
-            <img src="@/assets/AhmetOktaySonRevize.jpeg" alt="Muhammed Coşgun" />
+            <img src="@/assets/Sertay_Kabuk.jpeg" alt="Sertay Kabuk" />
           </div>
           <div class="speaker-info">
-            <h3>Muhammed Coşgun</h3>
+            <h3>Sertay KABUK</h3>
             <p class="title">Mecostech Kurucusu, VR/AR Teknolojileri Uzmanı</p>
             <p class="bio">Muhammed Coşgun, Uludağ Üniversitesi mezunu bir teknoloji girişimcisidir. Kurucusu olduğu Mecostech firması bünyesinde; VR, AR ve XR tabanlı havacılık, lojistik ve sağlık teknolojileri alanında projeler geliştirmekte, yapay zekâ ve yazılım çözümleriyle farklı sektörlerin ihtiyaçlarına yenilikçi yaklaşımlar sunmaktadır.</p>
             <p class="bio">Havacılıktan sağlığa uzanan geniş bir yelpazede, dijital uygulamalar üzerine yapay zekâ destekli VR/AR/XR yazılım geliştirme faaliyetlerini sürdürmektedir.</p>
             <p class="bio">Teknoloji ile sağlığı buluşturan projelere öncülük eden Coşgun, çeşitli üniversitelerde ve teknoloji topluluklarında bilgi ve deneyimlerini paylaşarak genç girişimcilere ilham vermeye devam etmektedir.</p>
-          </div>
-        </div>
-
-        <div class="speaker-card">
-          <div class="speaker-image">
-            <img src="@/assets/AhmetOktaySonRevize.jpeg" alt="Yaşar Mustafa Yiğit" />
-          </div>
-          <div class="speaker-info">
-            <h3>Yaşar Mustafa Yiğit</h3>
-            <p class="title">Yapıdrom Mobility COO</p>
-            <p class="bio">Yaşar Mustafa Yiğit, Marmara Üniversitesi mezunu bir teknoloji ve operasyon lideridir. Kariyerine, Mastercard'ın PayPass teknolojisinin proje yönetimi ve kullanıcı kabul testleri gibi önemli projelerinde görev alarak başlamıştır.</p>
-            <p class="bio">Daha sonra, Delivery Hero ve Bolt gibi uluslararası teknoloji şirketlerinde operasyonel liderlik rollerinde bulunmuş, bu deneyimleriyle dijital dönüşüm ve mobilite alanlarında derin bir uzmanlık kazanmıştır.</p>
-            <p class="bio">Şu anda Yapıdrom Mobility'de Chief Operating Officer (COO) olarak görev yapmakta olan Yiğit, şirketin tüm operasyonel faaliyetlerini yönetmektedir. Yapıdrom'un, Türkiye'nin enerji geleceğine katkı sağlamak amacıyla Yeşilyurt Enerji bünyesine katılmasıyla birlikte, sürdürülebilir ulaşım çözümleri geliştirme misyonunu daha da güçlendirmiştir.</p>
           </div>
         </div>
       </div>

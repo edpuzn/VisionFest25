@@ -5,24 +5,60 @@
       <p class="subtitle">Etkinlik ile ilgili sorularınız için bizimle iletişime geçebilir veya sosyal medya kanallarımızdan bizi takip edebilirsiniz.</p>
       
       <div class="contact-content">
-        <div class="contact-info">
-          <div class="address">
-            <h3>Adres</h3>
-            <p>Atatürk Üniversitesi 15 Temmuz Milli İrade Konferans Salonu<br>
-            Atatürk Üniversitesi Rektörlük Binası Yanı KÜLTÜR MERKEZİ, Erzurum</p>
-          </div>
-          
-          <a href="https://linktr.ee/aisummiterzurum" class="cta-button" target="_blank">ŞİMDİ BAŞVUR</a>
-          
-          <div class="social-media">
-            <h3>Sosyal Medya Hesaplarımız</h3>
-            <div class="social-links">
-              <a href="#" target="_blank"><i class="fab fa-linkedin"></i> AI Summit LinkedIn</a>
-              <a href="#" target="_blank"><i class="fab fa-instagram"></i> AI Summit Instagram</a>
-              <a href="#" target="_blank"><i class="fab fa-instagram"></i> Atasoft Instagram</a>
-              <a href="#" target="_blank"><i class="fab fa-instagram"></i> HSD</a>
-              <a href="#" target="_blank"><i class="fab fa-instagram"></i> Atatürk Üniversitesi Instagram</a>
+        <div class="contact-grid">
+          <div class="contact-info">
+            <div class="info-card">
+              <i class="fas fa-map-marker-alt"></i>
+              <h3>Adres</h3>
+              <p>Fırat Üniversitesi<br>
+              Rektörlük Binası Yanı KÜLTÜR MERKEZİ<br>
+              Elazığ</p>
             </div>
+
+            <div class="info-card">
+              <i class="fas fa-envelope"></i>
+              <h3>E-posta</h3>
+              <p>info@visionfest.com</p>
+            </div>
+
+            <div class="info-card">
+              <i class="fas fa-phone"></i>
+              <h3>Telefon</h3>
+              <p>+90 (424) 123 45 67</p>
+            </div>
+          </div>
+
+          <div class="contact-cta">
+            <div class="cta-content">
+              <h2>Etkinliğe Katılmak İster misiniz?</h2>
+              <p>Hemen başvurun ve geleceğin teknolojilerini keşfetmeye başlayın!</p>
+              <a href="https://linktr.ee/hsdfirat" class="cta-button" target="_blank">
+                <i class="fas fa-paper-plane"></i>
+                <span>BAŞVUR</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="social-media">
+          <h3>Sosyal Medya Hesaplarımız</h3>
+          <div class="social-links">
+            <a href="#" class="social-link" target="_blank">
+              <i class="fab fa-linkedin"></i>
+              <span>LinkedIn</span>
+            </a>
+            <a href="#" class="social-link" target="_blank">
+              <i class="fab fa-instagram"></i>
+              <span>Instagram</span>
+            </a>
+            <a href="#" class="social-link" target="_blank">
+              <i class="fab fa-twitter"></i>
+              <span>Twitter</span>
+            </a>
+            <a href="#" class="social-link" target="_blank">
+              <i class="fab fa-youtube"></i>
+              <span>YouTube</span>
+            </a>
           </div>
         </div>
       </div>
@@ -39,7 +75,7 @@ export default {
 <style scoped>
 .contact-page {
   padding: 120px 0 80px;
-  background-color: #f8f9fa;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
   overflow: hidden;
   opacity: 0;
   transform: translateY(30px);
@@ -60,7 +96,7 @@ export default {
 h1 {
   text-align: center;
   margin-bottom: 20px;
-  color: #333;
+  color: #2F3C4E;
   font-size: 2.5rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -82,107 +118,181 @@ h1 {
 }
 
 .contact-content {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
   opacity: 0;
   transform: translateY(30px);
   animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.4s forwards;
 }
 
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
 .contact-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.info-card {
   background: white;
-  padding: 50px;
+  padding: 30px;
   border-radius: 15px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  text-align: center;
+  border: 1px solid rgba(130, 36, 57, 0.1);
 }
 
-.address {
-  margin-bottom: 40px;
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.6s forwards;
+.info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
-.address h3 {
-  color: #333;
-  font-size: 1.5rem;
-  font-weight: 600;
+.info-card i {
+  font-size: 2.5rem;
+  color: #822439;
   margin-bottom: 20px;
-  font-family: 'Poppins', sans-serif;
 }
 
-.address p {
+.info-card h3 {
+  color: #2F3C4E;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.info-card p {
   color: #666;
-  line-height: 1.8;
+  line-height: 1.6;
   font-size: 1.1rem;
-  font-family: 'Poppins', sans-serif;
+}
+
+.contact-cta {
+  background: linear-gradient(135deg, #822439 0%, #c41e3a 100%);
+  border-radius: 15px;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  box-shadow: 0 10px 30px rgba(130, 36, 57, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
+  z-index: 1;
+}
+
+.cta-content {
+  position: relative;
+  z-index: 2;
+}
+
+.cta-content h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.cta-content p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  opacity: 0.9;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
 }
 
 .cta-button {
-  background-color: #2F3C4E;
-  color: white;
-  padding: 12px 30px;
+  background-color: white;
+  color: #822439;
+  padding: 15px 40px;
   border-radius: 30px;
   text-decoration: none;
   font-weight: 600;
+  font-size: 1.2rem;
   transition: all 0.3s ease;
-  display: inline-block;
-  margin-top: 20px;
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.8s forwards;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: 2px solid white;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.cta-button i {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
 }
 
 .cta-button:hover {
-  background-color: #2F3C4E;
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(47, 60, 78, 0.3);
+  background-color: transparent;
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+}
+
+.cta-button:hover i {
+  transform: translateX(5px);
 }
 
 .social-media {
-  margin-top: 40px;
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) 1s forwards;
+  text-align: center;
+  margin-top: 60px;
 }
 
 .social-media h3 {
-  color: #333;
-  font-size: 1.5rem;
+  color: #2F3C4E;
+  font-size: 1.8rem;
+  margin-bottom: 30px;
   font-weight: 600;
-  margin-bottom: 25px;
-  font-family: 'Poppins', sans-serif;
 }
 
 .social-links {
   display: flex;
-  flex-direction: column;
-  gap: 20px;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
 }
 
-.social-links a {
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   color: #2F3C4E;
   text-decoration: none;
-  transition: color 0.3s ease;
-  opacity: 0;
-  transform: translateX(-20px);
+  padding: 15px 30px;
+  border-radius: 30px;
+  background: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
 }
 
-.social-links a:hover {
-  color: #2F3C4E;
-  text-decoration: underline;
+.social-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-.social-links i {
+.social-link i {
   font-size: 1.5rem;
-  color: #007bff;
+  color: #822439;
 }
 
-.contact-page.active .social-links a:nth-child(1) { animation: slideInRight 0.5s cubic-bezier(0.4, 0, 0.2, 1) 1.2s forwards; }
-.contact-page.active .social-links a:nth-child(2) { animation: slideInRight 0.5s cubic-bezier(0.4, 0, 0.2, 1) 1.3s forwards; }
-.contact-page.active .social-links a:nth-child(3) { animation: slideInRight 0.5s cubic-bezier(0.4, 0, 0.2, 1) 1.4s forwards; }
-.contact-page.active .social-links a:nth-child(4) { animation: slideInRight 0.5s cubic-bezier(0.4, 0, 0.2, 1) 1.5s forwards; }
-.contact-page.active .social-links a:nth-child(5) { animation: slideInRight 0.5s cubic-bezier(0.4, 0, 0.2, 1) 1.6s forwards; }
+.social-link span {
+  font-weight: 500;
+}
 
 @keyframes fadeInUp {
   from {
@@ -195,51 +305,28 @@ h1 {
   }
 }
 
-@keyframes slideInRight {
-  from {
-    opacity: 0;
-    transform: translateX(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
 @media (max-width: 768px) {
   .contact-page {
-    padding: 100px 0 60px;
+    padding: 80px 0 40px;
   }
 
-  h1 {
-    font-size: 2rem;
-  }
-
-  .subtitle {
-    font-size: 1.1rem;
-    margin-bottom: 40px;
+  .contact-grid {
+    grid-template-columns: 1fr;
   }
 
   .contact-info {
-    padding: 30px;
+    grid-template-columns: 1fr;
   }
 
-  .address h3,
-  .social-media h3 {
-    font-size: 1.3rem;
+  .social-links {
+    flex-direction: column;
+    align-items: center;
   }
 
-  .address p {
-    font-size: 1rem;
-  }
-
-  .cta-button {
-    font-size: 1.1rem;
-    padding: 12px 30px;
-  }
-
-  .social-links a {
-    font-size: 1rem;
+  .social-link {
+    width: 100%;
+    max-width: 300px;
+    justify-content: center;
   }
 }
 </style> 
