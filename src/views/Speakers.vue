@@ -7,7 +7,7 @@
       <div class="speakers-grid">
         <div class="speaker-card">
           <div class="speaker-image">
-            <img src="../assets/Ahmet_Şeker.jpeg" alt="Ahmet Şeker" />
+            <img src="./assets/Ahmet_Şeker.jpeg" alt="Ahmet Şeker" />
           </div>
           <div class="speaker-info">
             <h3>Ahmet ŞEKER</h3>
@@ -20,7 +20,7 @@
 
         <div class="speaker-card">
           <div class="speaker-image">
-            <img src="../assets/Burak_Aytan.jpeg" alt="Burak Aytan" />
+            <img src="./assets/Burak_Aytan.jpeg" alt="Burak Aytan" />
           </div>
           <div class="speaker-info">
             <h3>Burak AYTAN</h3>
@@ -33,7 +33,7 @@
 
         <div class="speaker-card">
           <div class="speaker-image">
-            <img src="../assets/Can_Göymen.jpeg" alt="Can Göymen" />
+            <img src="./assets/Can_Göymen.jpeg" alt="Can Göymen" />
           </div>
           <div class="speaker-info">
             <h3>Can GÖYMEN</h3>
@@ -46,7 +46,7 @@
 
         <div class="speaker-card">
           <div class="speaker-image">
-            <img src="../assets/Kaan_Yeniyol.jpeg" alt="Kaan Yeniyol" />
+            <img src="./assets/Kaan_Yeniyol.jpeg" alt="Kaan Yeniyol" />
           </div>
           <div class="speaker-info">
             <h3>Kaan YENİYOL</h3>
@@ -59,7 +59,7 @@
 
         <div class="speaker-card">
           <div class="speaker-image">
-            <img src="../assets/Kübra_Bilgic.jpeg" alt="Kübra Bilgic" />
+            <img src="./assets/Kübra_Bilgic.jpeg" alt="Kübra Bilgic" />
           </div>
           <div class="speaker-info">
             <h3>Kübra BİLGİC</h3>
@@ -72,7 +72,7 @@
 
         <div class="speaker-card">
           <div class="speaker-image">
-            <img src="../assets/Murat_Celik.jpeg" alt="Murat Celik" />
+            <img src="./assets/Murat_Celik.jpeg" alt="Murat Celik" />
           </div>
           <div class="speaker-info">
             <h3>Murat ÇELİK</h3>
@@ -85,7 +85,7 @@
 
         <div class="speaker-card">
           <div class="speaker-image">
-            <img src="../assets/Sertay_Kabuk.jpeg" alt="Sertay Kabuk" />
+            <img src="./assets/Sertay_Kabuk.jpeg" alt="Sertay Kabuk" />
           </div>
           <div class="speaker-info">
             <h3>Sertay KABUK</h3>
