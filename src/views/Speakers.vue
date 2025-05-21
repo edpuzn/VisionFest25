@@ -5,94 +5,14 @@
       <p class="subtitle">AI Summit'in değerli konuşmacıları alanında uzman kişilerden oluşmaktadır.</p>
       
       <div class="speakers-grid">
-        <div class="speaker-card">
+        <div v-for="(speaker, index) in speakers" :key="index" class="speaker-card">
           <div class="speaker-image">
-            <img src="./assets/Ahmet_Şeker.jpeg" alt="Ahmet Şeker" />
+            <img :src="speaker.image" :alt="speaker.name" />
           </div>
           <div class="speaker-info">
-            <h3>Ahmet ŞEKER</h3>
-            <p class="title">Bilişim Uzmanı ve Akademisyen</p>
-            <p class="bio">Buğra Ayan, internet teknolojileri ve yapay zeka alanlarında çalışmalar yürüten bir bilişim uzmanıdır. Yüksek lisansını Gazi Üniversitesi'nde yapay zeka üzerine tamamlamış olup, şu anda doktora çalışmalarına büyük dil modelleri ve blokzincir üzerine devam etmektedir.</p>
-            <p class="bio">Ankara Üniversitesi ve Hacı Bayram Veli Üniversitesi'nde dersler vermekte; ayrıca sivil toplum kuruluşlarının kuruluş ve yönetim süreçlerinde aktif olarak yer almaktadır.</p>
-            <p class="bio">Çalışmaları genellikle yapay zeka, web ve mobil uygulama geliştirme üzerine yoğunlaşmakta; bunun yanı sıra çocuklar için İngilizce kitaplar yazmakta ve yapay zeka eğitimi verme gibi projeler üzerinde çalışmaktadır.</p>
-          </div>
-        </div>
-
-        <div class="speaker-card">
-          <div class="speaker-image">
-            <img src="./assets/Burak_Aytan.jpeg" alt="Burak Aytan" />
-          </div>
-          <div class="speaker-info">
-            <h3>Burak AYTAN</h3>
-            <p class="title">Endüstri Mühendisi, TOFAŞ</p>
-            <p class="bio">Özcan Çavuşoğlu, İstanbul Teknik Üniversitesi Endüstri Mühendisliği Bölümü'nden mezun olmuş ve aynı üniversitede Yönetim Mühendisliği alanında yüksek lisans yapmıştır.</p>
-            <p class="bio">Kariyerine AVEA İletişim Hizmetleri A.Ş.'de Organizasyon ve Kalite Uzmanı olarak başlamış; ardından Şekerbank T.A.Ş., Turkcell TL Hattı ve Koçtaş Yapı Marketleri A.Ş. gibi firmalarda süreç yönetimi ve iş geliştirme pozisyonlarında görev almıştır.</p>
-            <p class="bio">2013 yılında TOFAŞ Türk Otomobil Fabrikası A.Ş.'ye katılan Çavuşoğlu, burada Kalite Metot ve Planlama Yöneticisi olarak çalışmış, sonrasında Ürün ve Süreç Kalite Mühendisliği Departmanı Başkanı pozisyonuna yükselmiştir.</p>
-          </div>
-        </div>
-
-        <div class="speaker-card">
-          <div class="speaker-image">
-            <img src="./assets/Can_Göymen.jpeg" alt="Can Göymen" />
-          </div>
-          <div class="speaker-info">
-            <h3>Can GÖYMEN</h3>
-            <p class="title">Artiwise CEO</p>
-            <p class="bio">Taner Temel, Artiwise şirketinin kurucu ortağı ve CEO'sudur. 2000 yılında Yıldız Teknik Üniversitesi Matematik Mühendisliği Bölümü'nden mezun olmuş, 2013 yılında ise Doğuş Üniversitesi'nde İngilizce İşletme (MBA) yüksek lisansını tamamlamıştır.</p>
-            <p class="bio">Kariyerine yazılım firmalarında başlayan Temel, Toyota ve Turkcell Global Bilgi gibi büyük şirketlerde yazılım geliştirme mühendisliği ve yöneticilik pozisyonlarında deneyim kazanmıştır.</p>
-            <p class="bio">Büyük ölçekli firmaların müşteri geri bildirimlerini yönetmekte yaşadığı zorlukları fark ederek, yapay zeka ve doğal dil işleme teknolojilerini kullanarak müşteri deneyimini iyileştirmeyi hedefleyen Artiwise'ı kurmuştur.</p>
-          </div>
-        </div>
-
-        <div class="speaker-card">
-          <div class="speaker-image">
-            <img src="./assets/Kaan_Yeniyol.jpeg" alt="Kaan Yeniyol" />
-          </div>
-          <div class="speaker-info">
-            <h3>Kaan YENİYOL</h3>
-            <p class="title">Teknoloji ve İnovasyon Lideri</p>
-            <p class="bio">Ahmet Oktay, Doğu Akdeniz Üniversitesi Bilgisayar Mühendisliği Bölümü'nden mezun olmuş; teknoloji ve inovasyon dünyasında stratejik danışmanlık hizmetleriyle öne çıkan bir liderdir.</p>
-            <p class="bio">Alzmir Hub ve BSP Group gibi öncü kuruluşlarla iş birliği yaparak yapay zeka stratejileri ve dijital dönüşüm projelerinde önemli roller üstlenmektedir.</p>
-            <p class="bio">Ayrıca Mersin Kent Konseyi'nde "Herkes İçin Bilişim Komitesi" başkanı olarak, Mersin'i teknoloji alanında öncü bir şehir yapmak için çalışmaktadır.</p>
-          </div>
-        </div>
-
-        <div class="speaker-card">
-          <div class="speaker-image">
-            <img src="./assets/Kübra_Bilgic.jpeg" alt="Kübra Bilgic" />
-          </div>
-          <div class="speaker-info">
-            <h3>Kübra BİLGİC</h3>
-            <p class="title">Teknoloji Danışmanı, eski Microsoft Yöneticisi</p>
-            <p class="bio">Abdurrahman Bulut, 1990 yılında ODTÜ Elektronik Mühendisliği Bölümü'nden mezun olmuştur. 30 yıllık bilgi teknolojileri kariyerinin 20 yılını yurt dışında geçirmiştir. 8 yıl Kanada'da çeşitli şirketlerde, son 12 yıl ise Suudi Arabistan'da Microsoft'ta çalışmıştır.</p>
-            <p class="bio">Microsoft'taki son görevi, Suudi Arabistan Batı Bölgesi Projeler Koordinatörlüğü'dür. 2020 Ekim itibarıyla kesin dönüş yapmış; teknoloji felsefesi ve yaşadığımız çağa tanıklık etme çerçevesinde okuma, düşünme ve paylaşma üzerine çalışmalara yoğunlaşmıştır.</p>
-            <p class="bio">2019 yılından itibaren yapay zeka, teknoloji felsefesi, dataizm konularında açık ve kapalı konferanslar/sunumlar; lise ve dengi okullarda ise kariyer, motivasyon, başarı ve yurt dışında kariyer yapmak başlıklarında konuşmalar yapmaktadır.</p>
-          </div>
-        </div>
-
-        <div class="speaker-card">
-          <div class="speaker-image">
-            <img src="./assets/Murat_Celik.jpeg" alt="Murat Celik" />
-          </div>
-          <div class="speaker-info">
-            <h3>Murat ÇELİK</h3>
-            <p class="title">Monster Notebook ve Semruk Games Kurucusu</p>
-            <p class="bio">İlhan Yılmaz, Marmara Üniversitesi'nden 1996 yılında mezun oldu. 2000 yılında Meryem Yılmaz ile birlikte Fokus Bilgisayar'ı kurdu. Firma, ilk yıllarında teknoloji firmalarına toptan bilgisayar malzemeleri satışı yapıyordu. 2005 yılında ise Monster Notebook markası doğdu ve firmanın ilk bilgisayarları üretilip satılmaya başlandı.</p>
-            <p class="bio">Bugün gelinen noktada Monster Notebook, Türkiye'de oyun bilgisayarı pazarında ilk 3 sırada yer alıyor. İstanbul, Ankara ve İzmir'deki mağazalarıyla ve Monster Notebook Dijital Mağazası ile Türkiye'nin her noktasındaki son kullanıcıya ulaşıyor.</p>
-            <p class="bio">Semruk Games, sosyal farkındalık gerektiren konulara dijital oyunlar aracılığıyla dikkat çekmek amacıyla 2021 Ekim ayında kuruldu.</p>
-          </div>
-        </div>
-
-        <div class="speaker-card">
-          <div class="speaker-image">
-            <img src="./assets/Sertay_Kabuk.jpeg" alt="Sertay Kabuk" />
-          </div>
-          <div class="speaker-info">
-            <h3>Sertay KABUK</h3>
-            <p class="title">Mecostech Kurucusu, VR/AR Teknolojileri Uzmanı</p>
-            <p class="bio">Muhammed Coşgun, Uludağ Üniversitesi mezunu bir teknoloji girişimcisidir. Kurucusu olduğu Mecostech firması bünyesinde; VR, AR ve XR tabanlı havacılık, lojistik ve sağlık teknolojileri alanında projeler geliştirmekte, yapay zekâ ve yazılım çözümleriyle farklı sektörlerin ihtiyaçlarına yenilikçi yaklaşımlar sunmaktadır.</p>
-            <p class="bio">Havacılıktan sağlığa uzanan geniş bir yelpazede, dijital uygulamalar üzerine yapay zekâ destekli VR/AR/XR yazılım geliştirme faaliyetlerini sürdürmektedir.</p>
-            <p class="bio">Teknoloji ile sağlığı buluşturan projelere öncülük eden Coşgun, çeşitli üniversitelerde ve teknoloji topluluklarında bilgi ve deneyimlerini paylaşarak genç girişimcilere ilham vermeye devam etmektedir.</p>
+            <h3>{{ speaker.name }}</h3>
+            <p class="title">{{ speaker.title }}</p>
+            <p v-for="(paragraph, pIndex) in speaker.bio" :key="pIndex" class="bio">{{ paragraph }}</p>
           </div>
         </div>
       </div>
@@ -102,7 +22,83 @@
 
 <script>
 export default {
-  name: 'SpeakersPage'
+  name: 'SpeakersPage',
+  data() {
+    return {
+      speakers: [
+        {
+          name: 'Ahmet ŞEKER',
+          title: 'Bilişim Uzmanı ve Akademisyen',
+          image: require('@/assets/Ahmet_Şeker.jpeg'),
+          bio: [
+            'Buğra Ayan, internet teknolojileri ve yapay zeka alanlarında çalışmalar yürüten bir bilişim uzmanıdır. Yüksek lisansını Gazi Üniversitesi\'nde yapay zeka üzerine tamamlamış olup, şu anda doktora çalışmalarına büyük dil modelleri ve blokzincir üzerine devam etmektedir.',
+            'Ankara Üniversitesi ve Hacı Bayram Veli Üniversitesi\'nde dersler vermekte; ayrıca sivil toplum kuruluşlarının kuruluş ve yönetim süreçlerinde aktif olarak yer almaktadır.',
+            'Çalışmaları genellikle yapay zeka, web ve mobil uygulama geliştirme üzerine yoğunlaşmakta; bunun yanı sıra çocuklar için İngilizce kitaplar yazmakta ve yapay zeka eğitimi verme gibi projeler üzerinde çalışmaktadır.'
+          ]
+        },
+        {
+          name: 'Burak AYTAN',
+          title: 'Endüstri Mühendisi, TOFAŞ',
+          image: require('@/assets/Burak_Aytan.jpeg'),
+          bio: [
+            'Özcan Çavuşoğlu, İstanbul Teknik Üniversitesi Endüstri Mühendisliği Bölümü\'nden mezun olmuş ve aynı üniversitede Yönetim Mühendisliği alanında yüksek lisans yapmıştır.',
+            'Kariyerine AVEA İletişim Hizmetleri A.Ş.\'de Organizasyon ve Kalite Uzmanı olarak başlamış; ardından Şekerbank T.A.Ş., Turkcell TL Hattı ve Koçtaş Yapı Marketleri A.Ş. gibi firmalarda süreç yönetimi ve iş geliştirme pozisyonlarında görev almıştır.',
+            '2013 yılında TOFAŞ Türk Otomobil Fabrikası A.Ş.\'ye katılan Çavuşoğlu, burada Kalite Metot ve Planlama Yöneticisi olarak çalışmış, sonrasında Ürün ve Süreç Kalite Mühendisliği Departmanı Başkanı pozisyonuna yükselmiştir.'
+          ]
+        },
+        {
+          name: 'Can GÖYMEN',
+          title: 'Artiwise CEO',
+          image: require('@/assets/Can_Göymen.jpeg'),
+          bio: [
+            'Taner Temel, Artiwise şirketinin kurucu ortağı ve CEO\'sudur. 2000 yılında Yıldız Teknik Üniversitesi Matematik Mühendisliği Bölümü\'nden mezun olmuş, 2013 yılında ise Doğuş Üniversitesi\'nde İngilizce İşletme (MBA) yüksek lisansını tamamlamıştır.',
+            'Kariyerine yazılım firmalarında başlayan Temel, Toyota ve Turkcell Global Bilgi gibi büyük şirketlerde yazılım geliştirme mühendisliği ve yöneticilik pozisyonlarında deneyim kazanmıştır.',
+            'Büyük ölçekli firmaların müşteri geri bildirimlerini yönetmekte yaşadığı zorlukları fark ederek, yapay zeka ve doğal dil işleme teknolojilerini kullanarak müşteri deneyimini iyileştirmeyi hedefleyen Artiwise\'ı kurmuştur.'
+          ]
+        },
+        {
+          name: 'Kaan YENİYOL',
+          title: 'Teknoloji ve İnovasyon Lideri',
+          image: require('@/assets/Kaan_Yeniyol.jpeg'),
+          bio: [
+            'Ahmet Oktay, Doğu Akdeniz Üniversitesi Bilgisayar Mühendisliği Bölümü\'nden mezun olmuş; teknoloji ve inovasyon dünyasında stratejik danışmanlık hizmetleriyle öne çıkan bir liderdir.',
+            'Alzmir Hub ve BSP Group gibi öncü kuruluşlarla iş birliği yaparak yapay zeka stratejileri ve dijital dönüşüm projelerinde önemli roller üstlenmektedir.',
+            'Ayrıca Mersin Kent Konseyi\'nde "Herkes İçin Bilişim Komitesi" başkanı olarak, Mersin\'i teknoloji alanında öncü bir şehir yapmak için çalışmaktadır.'
+          ]
+        },
+        {
+          name: 'Kübra BİLGİC',
+          title: 'Teknoloji Danışmanı, eski Microsoft Yöneticisi',
+          image: require('@/assets/Kübra_Bilgic.jpeg'),
+          bio: [
+            'Abdurrahman Bulut, 1990 yılında ODTÜ Elektronik Mühendisliği Bölümü\'nden mezun olmuştur. 30 yıllık bilgi teknolojileri kariyerinin 20 yılını yurt dışında geçirmiştir. 8 yıl Kanada\'da çeşitli şirketlerde, son 12 yıl ise Suudi Arabistan\'da Microsoft\'ta çalışmıştır.',
+            'Microsoft\'taki son görevi, Suudi Arabistan Batı Bölgesi Projeler Koordinatörlüğü\'dür. 2020 Ekim itibarıyla kesin dönüş yapmış; teknoloji felsefesi ve yaşadığımız çağa tanıklık etme çerçevesinde okuma, düşünme ve paylaşma üzerine çalışmalara yoğunlaşmıştır.',
+            '2019 yılından itibaren yapay zeka, teknoloji felsefesi, dataizm konularında açık ve kapalı konferanslar/sunumlar; lise ve dengi okullarda ise kariyer, motivasyon, başarı ve yurt dışında kariyer yapmak başlıklarında konuşmalar yapmaktadır.'
+          ]
+        },
+        {
+          name: 'Murat ÇELİK',
+          title: 'Monster Notebook ve Semruk Games Kurucusu',
+          image: require('@/assets/Murat_Celik.jpeg'),
+          bio: [
+            'İlhan Yılmaz, Marmara Üniversitesi\'nden 1996 yılında mezun oldu. 2000 yılında Meryem Yılmaz ile birlikte Fokus Bilgisayar\'ı kurdu. Firma, ilk yıllarında teknoloji firmalarına toptan bilgisayar malzemeleri satışı yapıyordu. 2005 yılında ise Monster Notebook markası doğdu ve firmanın ilk bilgisayarları üretilip satılmaya başlandı.',
+            'Bugün gelinen noktada Monster Notebook, Türkiye\'de oyun bilgisayarı pazarında ilk 3 sırada yer alıyor. İstanbul, Ankara ve İzmir\'deki mağazalarıyla ve Monster Notebook Dijital Mağazası ile Türkiye\'nin her noktasındaki son kullanıcıya ulaşıyor.',
+            'Semruk Games, sosyal farkındalık gerektiren konulara dijital oyunlar aracılığıyla dikkat çekmek amacıyla 2021 Ekim ayında kuruldu.'
+          ]
+        },
+        {
+          name: 'Sertay KABUK',
+          title: 'Mecostech Kurucusu, VR/AR Teknolojileri Uzmanı',
+          image: require('@/assets/Sertay_Kabuk.jpeg'),
+          bio: [
+            'Muhammed Coşgun, Uludağ Üniversitesi mezunu bir teknoloji girişimcisidir. Kurucusu olduğu Mecostech firması bünyesinde; VR, AR ve XR tabanlı havacılık, lojistik ve sağlık teknolojileri alanında projeler geliştirmekte, yapay zekâ ve yazılım çözümleriyle farklı sektörlerin ihtiyaçlarına yenilikçi yaklaşımlar sunmaktadır.',
+            'Havacılıktan sağlığa uzanan geniş bir yelpazede, dijital uygulamalar üzerine yapay zekâ destekli VR/AR/XR yazılım geliştirme faaliyetlerini sürdürmektedir.',
+            'Teknoloji ile sağlığı buluşturan projelere öncülük eden Coşgun, çeşitli üniversitelerde ve teknoloji topluluklarında bilgi ve deneyimlerini paylaşarak genç girişimcilere ilham vermeye devam etmektedir.'
+          ]
+        }
+      ]
+    }
+  }
 }
 </script>
 

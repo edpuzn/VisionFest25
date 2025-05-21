@@ -45,11 +45,11 @@
           <div class="about-text">
             <div class="about-card">
               <i class="fas fa-robot"></i>
-              <p>AI Summit, yapay zeka teknolojilerinin tüm yönleriyle ele alındığı, alanında uzman konuşmacıların katılımıyla gerçekleşen önemli bir teknoloji zirvesidir. 2025 yılında "Makineler Düşünebilir mi?" temasıyla Atatürk Üniversitesi'nde düzenlenecek olan etkinlik, yapay zeka alanındaki son gelişmeleri, uygulamaları ve etik konuları masaya yatıracak.</p>
+            <p>AI Summit, yapay zeka teknolojilerinin tüm yönleriyle ele alındığı, alanında uzman konuşmacıların katılımıyla gerçekleşen önemli bir teknoloji zirvesidir. 2025 yılında "Makineler Düşünebilir mi?" temasıyla Atatürk Üniversitesi'nde düzenlenecek olan etkinlik, yapay zeka alanındaki son gelişmeleri, uygulamaları ve etik konuları masaya yatıracak.</p>
             </div>
             <div class="about-card">
               <i class="fas fa-users"></i>
-              <p>İki gün sürecek etkinlikte, akademisyenler, sektör temsilcileri ve öğrenciler bir araya gelerek yapay zeka teknolojilerinin geleceğini tartışacak, yeni fikirler üretecek ve işbirlikleri geliştirecekler.</p>
+            <p>İki gün sürecek etkinlikte, akademisyenler, sektör temsilcileri ve öğrenciler bir araya gelerek yapay zeka teknolojilerinin geleceğini tartışacak, yeni fikirler üretecek ve işbirlikleri geliştirecekler.</p>
             </div>
           </div>
         </div>

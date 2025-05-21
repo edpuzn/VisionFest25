@@ -6,10 +6,10 @@
       
       <div class="contact-content">
         <div class="contact-grid">
-          <div class="contact-info">
+        <div class="contact-info">
             <div class="info-card">
               <i class="fas fa-map-marker-alt"></i>
-              <h3>Adres</h3>
+            <h3>Adres</h3>
               <p>Fırat Üniversitesi<br>
               Rektörlük Binası Yanı KÜLTÜR MERKEZİ<br>
               Elazığ</p>
@@ -27,7 +27,7 @@
               <p>+90 (424) 123 45 67</p>
             </div>
           </div>
-
+          
           <div class="contact-cta">
             <div class="cta-content">
               <h2>Etkinliğe Katılmak İster misiniz?</h2>
@@ -39,10 +39,10 @@
             </div>
           </div>
         </div>
-
-        <div class="social-media">
-          <h3>Sosyal Medya Hesaplarımız</h3>
-          <div class="social-links">
+          
+          <div class="social-media">
+            <h3>Sosyal Medya Hesaplarımız</h3>
+            <div class="social-links">
             <a href="#" class="social-link" target="_blank">
               <i class="fab fa-linkedin"></i>
               <span>LinkedIn</span>
