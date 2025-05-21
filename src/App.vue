@@ -4,7 +4,7 @@
       <div class="container">
         <div class="logo">
           <router-link :to="{ path: '/', hash: 'home' }">
-            <img :src="isScrolled ? require('@/assets/logo_sade.png') : require('@/assets/logo.png')" alt="Vision Fest Logo" />
+            <img :src="isScrolled ? require('./assets/logo_sade.png') : require('./assets/logo.png')" alt="Vision Fest Logo" />
           </router-link>
         </div>
         <div class="nav-links" :class="{ active: isMobileMenuOpen }">
@@ -32,7 +32,7 @@
       <div class="container">
         <div class="footer-content">
           <div class="footer-logo">
-            <img src="@/assets/logo_sade.png" alt="Vision Fest Logo" />
+            <img src="./assets/logo_sade.png" alt="Vision Fest Logo" />
           </div>
           <div class="footer-links">
             <h3>Hızlı Bağlantılar</h3>
@@ -47,7 +47,7 @@
           <div class="footer-cta">
             <div class="developer-info">
               <div class="developer-image-container">
-                <img src="@/assets/Edip_Uzan.png" alt="Edip Uzan" class="developer-image" />
+                <img src="./assets/Edip_Uzan.png" alt="Edip Uzan" class="developer-image" />
               </div>
               <div class="developer-details">
                 <div class="developer-title">Developer</div>
