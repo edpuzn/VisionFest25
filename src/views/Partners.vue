@@ -1,7 +1,8 @@
 <template>
   <div class="partners-page">
     <div class="container">
-      <h2>Paydaşlarımız</h2>
+      <h2 class="section-title">PAYDAŞLAR</h2>
+      <p class="section-subtitle">Teknoloji ve İnovasyonun Güçlü İş Ortakları</p>
       <div class="partners-grid">
         <div class="partner-card">
           <img src="@/assets/huawei.png" alt="Huawei" />
@@ -43,6 +44,11 @@
           <h3>Turkcell</h3>
           <p>Platin Paydaş</p>
         </div>
+        <div class="partner-card">
+          <img src="@/assets/gsb.png" alt="gsb" />
+          <h3>Gençlik ve spor bakanlığı</h3>
+          <p>Platin Paydaş</p>
+        </div>
       </div>
     </div>
   </div>
@@ -68,13 +74,20 @@ export default {
 
 h2 {
   text-align: center;
-  margin-bottom: 60px;
   color: #2F3C4E;
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   font-weight: 700;
-  text-transform: uppercase;
+  margin-bottom: 20px;
   font-family: 'Poppins', sans-serif;
   position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+  letter-spacing: 1px;
+  background: linear-gradient(135deg, #2F3C4E 0%, #822439 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 h2::after {
@@ -83,10 +96,22 @@ h2::after {
   bottom: -15px;
   left: 50%;
   transform: translateX(-50%);
-  width: 80px;
+  width: 60px;
   height: 3px;
-  background: linear-gradient(90deg, #822439, #c41e3a);
+  background: #822439;
   border-radius: 3px;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: #2F3C4E;
+  font-size: 1.2rem;
+  margin-bottom: 60px;
+  opacity: 0.8;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  margin-top: 30px;
 }
 
 .partners-grid {

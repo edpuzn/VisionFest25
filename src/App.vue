@@ -1,88 +1,88 @@
 <template>
-  <div class="app">
-    <div class="page-transition" v-if="isLoading">
-      <div class="loader">
-        <img src="@/assets/logo_sade.png" alt="FıratVision Fest Logo" class="logo-animation">
-        <div class="loading-text">FIRAT VISION FEST 2025</div>
+<div class="app">
+<div class="page-transition" v-if="isLoading">
+  <div class="loader">
+    <img src="@/assets/logo_sade.png" alt="FıratVision Fest Logo" class="logo-animation">
+    <div class="loading-text">FIRAT VISION FEST 2025</div>
+  </div>
+</div>
+<div v-else>
+  <nav class="navbar" :class="{ 'scrolled': isScrolled }">
+    <div class="container">
+      <div class="logo">
+        <a href="#home" @click.prevent="scrollToSection('home')">
+          <img :src="isScrolled ? require('@/assets/logo_sade.png') : require('@/assets/logo.png')" alt="Vision Fest Logo" />
+        </a>
+      </div>
+      <div class="nav-links" :class="{ active: isMobileMenuOpen }">
+        <a href="#home" class="nav-link" @click.prevent="scrollToSection('home')" :class="{ active: currentSection === 'home' }">Ana Sayfa</a>
+        <a href="#about" class="nav-link" @click.prevent="scrollToSection('about')" :class="{ active: currentSection === 'about' }">Hakkımızda</a>
+        <a href="#speakers" class="nav-link" @click.prevent="scrollToSection('speakers')" :class="{ active: currentSection === 'speakers' }">Konuşmacılar</a>
+        <a href="#partners" class="nav-link" @click.prevent="scrollToSection('partners')" :class="{ active: currentSection === 'partners' }">Paydaşlar</a>
+        <a href="#contact" class="nav-link" @click.prevent="scrollToSection('contact')" :class="{ active: currentSection === 'contact' }">İletişim</a>
+      </div>
+      <div class="mobile-menu-btn" :class="{ active: isMobileMenuOpen }" @click="toggleMobileMenu">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
     </div>
-    <div v-else>
-      <nav class="navbar" :class="{ 'scrolled': isScrolled }">
-        <div class="container">
-          <div class="logo">
-            <a href="#home" @click.prevent="scrollToSection('home')">
-              <img :src="isScrolled ? require('./assets/logo_sade.png') : require('./assets/logo.png')" alt="Vision Fest Logo" />
-            </a>
-          </div>
-          <div class="nav-links" :class="{ active: isMobileMenuOpen }">
-            <a href="#home" class="nav-link" @click.prevent="scrollToSection('home')">Ana Sayfa</a>
-            <a href="#about" class="nav-link" @click.prevent="scrollToSection('about')">Hakkımızda</a>
-            <a href="#speakers" class="nav-link" @click.prevent="scrollToSection('speakers')">Konuşmacılar</a>
-            <a href="#partners" class="nav-link" @click.prevent="scrollToSection('partners')">Paydaşlar</a>
-            <a href="#contact" class="nav-link" @click.prevent="scrollToSection('contact')">İletişim</a>
-          </div>
-          <div class="mobile-menu-btn" :class="{ active: isMobileMenuOpen }" @click="toggleMobileMenu">
-            <span></span>
-            <span></span>
-            <span></span>
+  </nav>
+
+  <main class="main-content">
+    <section id="home" class="page-section">
+      <Home />
+    </section>
+    <section id="about" class="page-section">
+      <About />
+    </section>
+    <section id="speakers" class="page-section">
+      <Speakers />
+    </section>
+    <section id="partners" class="page-section">
+      <Partners />
+    </section>
+    <section id="contact" class="page-section">
+      <Contact />
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="@/assets/logo_sade.png" alt="Vision Fest Logo" />
+        </div>
+        <div class="footer-links">
+          <h3>Hızlı Bağlantılar</h3>
+          <div class="links-container">
+            <a href="#home" class="nav-link" @click.prevent="scrollToSection('home')" :class="{ active: currentSection === 'home' }">Ana Sayfa</a>
+            <a href="#about" class="nav-link" @click.prevent="scrollToSection('about')" :class="{ active: currentSection === 'about' }">Hakkımızda</a>
+            <a href="#speakers" class="nav-link" @click.prevent="scrollToSection('speakers')" :class="{ active: currentSection === 'speakers' }">Konuşmacılar</a>
+            <a href="#partners" class="nav-link" @click.prevent="scrollToSection('partners')" :class="{ active: currentSection === 'partners' }">Paydaşlar</a>
+            <a href="#contact" class="nav-link" @click.prevent="scrollToSection('contact')" :class="{ active: currentSection === 'contact' }">İletişim</a>
           </div>
         </div>
-      </nav>
-
-      <main class="main-content">
-        <section id="home" class="page-section">
-          <Home />
-        </section>
-        <section id="about" class="page-section">
-          <About />
-        </section>
-        <section id="speakers" class="page-section">
-          <Speakers />
-        </section>
-        <section id="partners" class="page-section">
-          <Partners />
-        </section>
-        <section id="contact" class="page-section">
-          <Contact />
-        </section>
-      </main>
-
-      <footer class="footer">
-        <div class="container">
-          <div class="footer-content">
-            <div class="footer-logo">
-              <img src="./assets/logo_sade.png" alt="Vision Fest Logo" />
+        <div class="footer-cta">
+          <div class="developer-info">
+            <div class="developer-image-container">
+              <img src="@/assets/Edip_Uzan.png" alt="Edip Uzan" class="developer-image" />
             </div>
-            <div class="footer-links">
-              <h3>Hızlı Bağlantılar</h3>
-              <div class="links-container">
-                <a href="#home" class="nav-link" @click.prevent="scrollToSection('home')">Ana Sayfa</a>
-                <a href="#about" class="nav-link" @click.prevent="scrollToSection('about')">Hakkımızda</a>
-                <a href="#speakers" class="nav-link" @click.prevent="scrollToSection('speakers')">Konuşmacılar</a>
-                <a href="#partners" class="nav-link" @click.prevent="scrollToSection('partners')">Paydaşlar</a>
-                <a href="#contact" class="nav-link" @click.prevent="scrollToSection('contact')">İletişim</a>
-              </div>
+            <div class="developer-details">
+              <div class="developer-title">Developer</div>
+              <h3>Edip UZAN</h3>
+              <div class="developer-role">HSD Fırat Sosyal Medya Komitesi</div>
             </div>
-            <div class="footer-cta">
-              <div class="developer-info">
-                <div class="developer-image-container">
-                  <img src="./assets/Edip_Uzan.png" alt="Edip Uzan" class="developer-image" />
-                </div>
-                <div class="developer-details">
-                  <div class="developer-title">Developer</div>
-                  <h3>Edip UZAN</h3>
-                  <div class="developer-role">HSD Fırat Sosyal Medya Komitesi</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="footer-bottom">
-            <p>&copy; 2025 Vision Fest. Tüm hakları saklıdır.</p>
           </div>
         </div>
-      </footer>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Vision Fest. Tüm hakları saklıdır.</p>
+      </div>
     </div>
-  </div>
+  </footer>
+</div>
+</div>
 </template>
 
 <script>
@@ -113,7 +113,6 @@ export default {
     window.addEventListener('scroll', this.handleScroll)
     window.addEventListener('scroll', this.handleSectionVisibility)
 
-    // Smooth scroll için link tıklamalarını dinle
     document.querySelectorAll('.nav-links a, .footer-links a').forEach(link => {
       link.addEventListener('click', (e) => {
         e.preventDefault()
@@ -122,12 +121,16 @@ export default {
       })
     })
 
-    // Yükleme ekranını 2 saniye sonra kapat
+    // Sayfa tam yüklendikten sonra #home'a scroll et
     setTimeout(() => {
       this.isLoading = false
-      this.scrollToSection('home')
+
+      this.$nextTick(() => {
+        this.scrollToSection('home')
+      })
     }, 2000)
   },
+
   beforeUnmount() {
     window.removeEventListener('scroll', this.handleScroll)
     window.removeEventListener('scroll', this.handleSectionVisibility)

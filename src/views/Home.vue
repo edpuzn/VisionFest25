@@ -164,7 +164,7 @@ export default {
     },
     animate() {
       this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height)
-      
+
       // Update and draw particles
       this.particles.forEach(particle => {
         // Move particles
@@ -180,7 +180,7 @@ export default {
           const dx = this.mouse.x - particle.x
           const dy = this.mouse.y - particle.y
           const distance = Math.sqrt(dx * dx + dy * dy)
-          
+
           if (distance < this.mouse.radius) {
             const angle = Math.atan2(dy, dx)
             const force = (this.mouse.radius - distance) / this.mouse.radius
@@ -286,9 +286,9 @@ export default {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: 
-    radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.2) 1px, transparent 1px),
-    radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.2) 1px, transparent 1px);
+  background-image:
+      radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.2) 1px, transparent 1px),
+      radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.2) 1px, transparent 1px);
   background-size: 50px 50px;
   animation: particleMove 20s linear infinite;
 }

@@ -1,8 +1,8 @@
 <template>
   <div class="speakers-page">
     <div class="container">
-      <h1>UZMAN KONUŞMACILARIMIZ</h1>
-      <p class="subtitle">FıratVision Fest 2025'te, teknoloji ve girişimcilik dünyasının önde gelen isimleri sizlerle buluşuyor.</p>
+      <h2 class="section-title">KONUŞMACILAR</h2>
+      <p class="section-subtitle">Teknoloji ve İnovasyonun Öncü İsimleri</p>
       
       <div class="speakers-grid">
         <div v-for="(speaker, index) in speakers" :key="index" class="speaker-card">
@@ -140,10 +140,10 @@ export default {
   padding: 0 20px;
 }
 
-h1 {
+h2 {
   text-align: center;
   color: #2F3C4E;
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-weight: 700;
   margin-bottom: 20px;
   font-family: 'Poppins', sans-serif;
@@ -151,27 +151,35 @@ h1 {
   display: inline-block;
   left: 50%;
   transform: translateX(-50%);
+  letter-spacing: 1px;
+  background: linear-gradient(135deg, #2F3C4E 0%, #822439 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-h1::after {
+h2::after {
   content: '';
   position: absolute;
   bottom: -15px;
   left: 50%;
   transform: translateX(-50%);
-  width: 80px;
+  width: 60px;
   height: 3px;
-  background: linear-gradient(90deg, #822439, #c41e3a);
+  background: #822439;
   border-radius: 3px;
 }
 
-.subtitle {
+.section-subtitle {
   text-align: center;
   color: #2F3C4E;
   font-size: 1.2rem;
   margin-bottom: 60px;
   opacity: 0.8;
   font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  margin-top: 30px;
 }
 
 .speakers-grid {
@@ -307,11 +315,11 @@ h1::after {
     padding: 80px 0;
   }
 
-  h1 {
+  h2 {
     font-size: 2.5rem;
   }
 
-  .subtitle {
+  .section-subtitle {
     font-size: 1.1rem;
     margin-bottom: 40px;
   }
