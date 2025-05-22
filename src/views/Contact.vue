@@ -1,63 +1,32 @@
 <template>
-  <div id="contact" class="contact-page">
+  <div class="contact-page">
     <div class="container">
-      <h1>BİZE ULAŞIN</h1>
-      <p class="subtitle">Etkinlik ile ilgili sorularınız için bizimle iletişime geçebilir veya sosyal medya kanallarımızdan bizi takip edebilirsiniz.</p>
-      
+      <h2>İletişim</h2>
       <div class="contact-content">
-        <div class="contact-grid">
         <div class="contact-info">
-            <div class="info-card">
-              <i class="fas fa-map-marker-alt"></i>
+          <div class="info-card">
+            <i class="fas fa-map-marker-alt"></i>
             <h3>Adres</h3>
-              <p>Fırat Üniversitesi<br>
-              Rektörlük Binası Yanı KÜLTÜR MERKEZİ<br>
-              Elazığ</p>
-            </div>
-
-            <div class="info-card">
-              <i class="fas fa-envelope"></i>
-              <h3>E-posta</h3>
-              <p>info@visionfest.com</p>
-            </div>
-
-            <div class="info-card">
-              <i class="fas fa-phone"></i>
-              <h3>Telefon</h3>
-              <p>+90 (424) 123 45 67</p>
-            </div>
+            <p>Fırat Üniversitesi, Rektörlük Kampüsü<br>23119 Elazığ, Türkiye</p>
           </div>
-          
-          <div class="contact-cta">
-            <div class="cta-content">
-              <h2>Etkinliğe Katılmak İster misiniz?</h2>
-              <p>Hemen başvurun ve geleceğin teknolojilerini keşfetmeye başlayın!</p>
-              <a href="https://linktr.ee/hsdfirat" class="cta-button" target="_blank">
-                <i class="fas fa-paper-plane"></i>
-                <span>BAŞVUR</span>
-              </a>
-            </div>
+          <div class="info-card">
+            <i class="fas fa-envelope"></i>
+            <h3>E-posta</h3>
+            <p>info@firatvisionfest.com</p>
+          </div>
+          <div class="info-card">
+            <i class="fas fa-phone"></i>
+            <h3>Telefon</h3>
+            <p>+90 (424) 237 00 00</p>
           </div>
         </div>
-          
-          <div class="social-media">
-            <h3>Sosyal Medya Hesaplarımız</h3>
-            <div class="social-links">
-            <a href="#" class="social-link" target="_blank">
-              <i class="fab fa-linkedin"></i>
-              <span>LinkedIn</span>
-            </a>
-            <a href="#" class="social-link" target="_blank">
-              <i class="fab fa-instagram"></i>
-              <span>Instagram</span>
-            </a>
-            <a href="#" class="social-link" target="_blank">
-              <i class="fab fa-twitter"></i>
-              <span>Twitter</span>
-            </a>
-            <a href="#" class="social-link" target="_blank">
-              <i class="fab fa-youtube"></i>
-              <span>YouTube</span>
+        <div class="contact-cta">
+          <div class="cta-content">
+            <h2>Etkinliğe Katılmak İster misiniz?</h2>
+            <p>Hemen başvurun ve geleceğin teknolojilerini keşfetmeye başlayın!</p>
+            <a href="https://linktr.ee/hsdfirat" class="cta-button" target="_blank">
+              <i class="fas fa-paper-plane"></i>
+              <span>BAŞVUR</span>
             </a>
           </div>
         </div>
@@ -68,23 +37,37 @@
 
 <script>
 export default {
-  name: 'ContactPage'
+  name: 'ContactPage',
+  data() {
+    return {
+      form: {
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+      }
+    }
+  },
+  methods: {
+    handleSubmit() {
+      // Form gönderme işlemi burada yapılacak
+      console.log('Form submitted:', this.form)
+      // Form alanlarını temizle
+      this.form = {
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+      }
+    }
+  }
 }
 </script>
 
 <style scoped>
 .contact-page {
-  padding: 120px 0 80px;
+  padding: 80px 0;
   background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-  overflow: hidden;
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.contact-page.active {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 .container {
@@ -93,43 +76,34 @@ export default {
   padding: 0 20px;
 }
 
-h1 {
+h2 {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 60px;
   color: #2F3C4E;
   font-size: 2.5rem;
   font-weight: 700;
   text-transform: uppercase;
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
   font-family: 'Poppins', sans-serif;
+  position: relative;
 }
 
-.subtitle {
-  text-align: center;
-  color: #666;
-  font-size: 1.2rem;
-  margin-bottom: 60px;
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.2s forwards;
-  font-family: 'Poppins', sans-serif;
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #822439, #c41e3a);
+  border-radius: 3px;
 }
 
 .contact-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.4s forwards;
-}
-
-.contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  margin-bottom: 60px;
+  gap: 50px;
+  margin-top: 40px;
 }
 
 .contact-info {
@@ -142,15 +116,15 @@ h1 {
   background: white;
   padding: 30px;
   border-radius: 15px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   text-align: center;
+  transition: all 0.3s ease;
   border: 1px solid rgba(130, 36, 57, 0.1);
 }
 
 .info-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
 .info-card i {
@@ -164,12 +138,14 @@ h1 {
   font-size: 1.3rem;
   margin-bottom: 15px;
   font-weight: 600;
+  font-family: 'Poppins', sans-serif;
 }
 
 .info-card p {
-  color: #666;
-  line-height: 1.6;
+  color: #2F3C4E;
   font-size: 1.1rem;
+  line-height: 1.6;
+  font-family: 'Poppins', sans-serif;
 }
 
 .contact-cta {
@@ -207,6 +183,7 @@ h1 {
   margin-bottom: 20px;
   font-weight: 600;
   text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  color: white;
 }
 
 .cta-content p {
@@ -248,85 +225,56 @@ h1 {
   transform: translateX(5px);
 }
 
-.social-media {
-  text-align: center;
-  margin-top: 60px;
-}
-
-.social-media h3 {
-  color: #2F3C4E;
-  font-size: 1.8rem;
-  margin-bottom: 30px;
-  font-weight: 600;
-}
-
-.social-links {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-
-.social-link {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: #2F3C4E;
-  text-decoration: none;
-  padding: 15px 30px;
-  border-radius: 30px;
-  background: white;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-  transition: all 0.3s ease;
-}
-
-.social-link:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-}
-
-.social-link i {
-  font-size: 1.5rem;
-  color: #822439;
-}
-
-.social-link span {
-  font-weight: 500;
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 @media (max-width: 768px) {
   .contact-page {
-    padding: 80px 0 40px;
+    padding: 60px 0;
   }
 
-  .contact-grid {
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+
+  .contact-content {
     grid-template-columns: 1fr;
+    gap: 40px;
   }
 
   .contact-info {
     grid-template-columns: 1fr;
   }
 
-  .social-links {
-    flex-direction: column;
-    align-items: center;
+  .info-card {
+    padding: 20px;
   }
 
-  .social-link {
-    width: 100%;
-    max-width: 300px;
-    justify-content: center;
+  .info-card i {
+    font-size: 2rem;
+  }
+
+  .info-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .info-card p {
+    font-size: 1rem;
+  }
+
+  .contact-cta {
+    padding: 30px;
+  }
+
+  .cta-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .cta-content p {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    padding: 12px 30px;
+    font-size: 1.1rem;
   }
 }
 </style> 

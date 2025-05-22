@@ -1,5 +1,5 @@
 <template>
-  <div id="home" class="home-page">
+  <div class="home-page">
     <section class="hero">
       <div class="animated-background">
         <div class="gradient-sphere"></div>
@@ -10,7 +10,6 @@
       <div class="container">
         <h1>FIRAT VISION FEST 2025</h1>
         <p class="date">29 Mayıs 2025 | FIRAT ÜNİVERSİTESİ</p>
-
         <div class="countdown">
           <div class="countdown-item">
             <span class="number">{{ days }}</span>
@@ -29,7 +28,6 @@
             <span class="label">Saniye</span>
           </div>
         </div>
-
         <div class="cta-section">
           <p class="cta-text">Geleceğin Teknolojilerini Keşfetmeye Hazır mısınız?</p>
           <div class="cta-spacer"></div>
@@ -45,11 +43,15 @@
           <div class="about-text">
             <div class="about-card">
               <i class="fas fa-robot"></i>
-            <p>AI Summit, yapay zeka teknolojilerinin tüm yönleriyle ele alındığı, alanında uzman konuşmacıların katılımıyla gerçekleşen önemli bir teknoloji zirvesidir. 2025 yılında "Makineler Düşünebilir mi?" temasıyla Atatürk Üniversitesi'nde düzenlenecek olan etkinlik, yapay zeka alanındaki son gelişmeleri, uygulamaları ve etik konuları masaya yatıracak.</p>
+              <p>Fırat Üniversitesi'nin 50. yılı kapsamında düzenlenen Vision Fest, yalnızca bir kutlama değil; Doğu Anadolu Bölgesi'nin teknoloji ve girişimcilik anlamında sahip olduğu büyük potansiyelin görünür kılınmasına yönelik stratejik bir adımdır. Bu etkinlik, yerel dinamiklerin ulusal ve küresel teknoloji trendleriyle buluştuğu, gençlerin ilham aldığı ve kendine yol çizdiği bir platform olmayı amaçlamaktadır.</p>
             </div>
             <div class="about-card">
               <i class="fas fa-users"></i>
-            <p>İki gün sürecek etkinlikte, akademisyenler, sektör temsilcileri ve öğrenciler bir araya gelerek yapay zeka teknolojilerinin geleceğini tartışacak, yeni fikirler üretecek ve işbirlikleri geliştirecekler.</p>
+              <p>Bölgemizdeki üniversite öğrencileri, özellikle yazılım ve mühendislik alanlarında büyük bir gelişim isteği içindedir ancak sektörle doğrudan temas edebilecekleri fırsatlar oldukça sınırlıdır. Bu noktada, alanında öncü ve vizyoner isimlerin katılımı, yalnızca bilgi paylaşımı anlamına gelmeyecek; aynı zamanda gençlerin kariyer motivasyonunu, girişimcilik hayallerini ve teknolojik üretkenliklerini tetikleyecektir.</p>
+            </div>
+            <div class="about-card">
+              <i class="fas fa-lightbulb"></i>
+              <p>Davet edeceğimiz konuşmacıların bilgi birikimi ve deneyimleri, Fırat Üniversitesi başta olmak üzere bölgedeki tüm gençler için yol gösterici nitelikte olacaktır. Katılımlarıyla, sadece bir etkinliğe değil, aynı zamanda bölgesel bir dönüşüm hareketine katkı sağlamış olacaklardır.</p>
             </div>
           </div>
         </div>

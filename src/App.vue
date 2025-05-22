@@ -1,67 +1,87 @@
 <template>
   <div class="app">
-    <nav class="navbar" :class="{ scrolled: isScrolled }">
-      <div class="container">
-        <div class="logo">
-          <router-link :to="{ path: '/', hash: 'home' }">
-            <img :src="isScrolled ? require('./assets/logo_sade.png') : require('./assets/logo.png')" alt="Vision Fest Logo" />
-          </router-link>
-        </div>
-        <div class="nav-links" :class="{ active: isMobileMenuOpen }">
-          <a href="#home" class="nav-link">Ana Sayfa</a>
-          <a href="#about" class="nav-link">Hakkımızda</a>
-          <a href="#speakers" class="nav-link">Konuşmacılar</a>
-          <a href="#partners" class="nav-link">Paydaşlar</a>
-          <a href="#contact" class="nav-link">İletişim</a>
-        </div>
-        <div class="mobile-menu-btn" :class="{ active: isMobileMenuOpen }" @click="toggleMobileMenu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+    <div class="page-transition" v-if="isLoading">
+      <div class="loader">
+        <img src="@/assets/logo_sade.png" alt="FıratVision Fest Logo" class="logo-animation">
+        <div class="loading-text">FIRAT VISION FEST 2025</div>
       </div>
-    </nav>
-
-    <Home />
-    <About />
-    <Speakers />
-    <Partners />
-    <Contact />
-
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-content">
-          <div class="footer-logo">
-            <img src="./assets/logo_sade.png" alt="Vision Fest Logo" />
+    </div>
+    <div v-else>
+      <nav class="navbar" :class="{ 'scrolled': isScrolled }">
+        <div class="container">
+          <div class="logo">
+            <a href="#home" @click.prevent="scrollToSection('home')">
+              <img :src="isScrolled ? require('./assets/logo_sade.png') : require('./assets/logo.png')" alt="Vision Fest Logo" />
+            </a>
           </div>
-          <div class="footer-links">
-            <h3>Hızlı Bağlantılar</h3>
-            <div class="links-container">
-              <router-link :to="{ path: '/', hash: 'home' }">Ana Sayfa</router-link>
-              <router-link :to="{ path: '/', hash: 'about' }">Hakkımızda</router-link>
-              <router-link :to="{ path: '/', hash: 'speakers' }">Konuşmacılar</router-link>
-              <router-link :to="{ path: '/', hash: 'partners' }">Paydaşlar</router-link>
-              <router-link :to="{ path: '/', hash: 'contact' }">İletişim</router-link>
+          <div class="nav-links" :class="{ active: isMobileMenuOpen }">
+            <a href="#home" class="nav-link" @click.prevent="scrollToSection('home')">Ana Sayfa</a>
+            <a href="#about" class="nav-link" @click.prevent="scrollToSection('about')">Hakkımızda</a>
+            <a href="#speakers" class="nav-link" @click.prevent="scrollToSection('speakers')">Konuşmacılar</a>
+            <a href="#partners" class="nav-link" @click.prevent="scrollToSection('partners')">Paydaşlar</a>
+            <a href="#contact" class="nav-link" @click.prevent="scrollToSection('contact')">İletişim</a>
+          </div>
+          <div class="mobile-menu-btn" :class="{ active: isMobileMenuOpen }" @click="toggleMobileMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </nav>
+
+      <main class="main-content">
+        <section id="home" class="page-section">
+          <Home />
+        </section>
+        <section id="about" class="page-section">
+          <About />
+        </section>
+        <section id="speakers" class="page-section">
+          <Speakers />
+        </section>
+        <section id="partners" class="page-section">
+          <Partners />
+        </section>
+        <section id="contact" class="page-section">
+          <Contact />
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="footer-content">
+            <div class="footer-logo">
+              <img src="./assets/logo_sade.png" alt="Vision Fest Logo" />
+            </div>
+            <div class="footer-links">
+              <h3>Hızlı Bağlantılar</h3>
+              <div class="links-container">
+                <a href="#home" class="nav-link" @click.prevent="scrollToSection('home')">Ana Sayfa</a>
+                <a href="#about" class="nav-link" @click.prevent="scrollToSection('about')">Hakkımızda</a>
+                <a href="#speakers" class="nav-link" @click.prevent="scrollToSection('speakers')">Konuşmacılar</a>
+                <a href="#partners" class="nav-link" @click.prevent="scrollToSection('partners')">Paydaşlar</a>
+                <a href="#contact" class="nav-link" @click.prevent="scrollToSection('contact')">İletişim</a>
+              </div>
+            </div>
+            <div class="footer-cta">
+              <div class="developer-info">
+                <div class="developer-image-container">
+                  <img src="./assets/Edip_Uzan.png" alt="Edip Uzan" class="developer-image" />
+                </div>
+                <div class="developer-details">
+                  <div class="developer-title">Developer</div>
+                  <h3>Edip UZAN</h3>
+                  <div class="developer-role">HSD Fırat Sosyal Medya Komitesi</div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="footer-cta">
-            <div class="developer-info">
-              <div class="developer-image-container">
-                <img src="./assets/Edip_Uzan.png" alt="Edip Uzan" class="developer-image" />
-              </div>
-              <div class="developer-details">
-                <div class="developer-title">Developer</div>
-                <h3>Edip UZAN</h3>
-                <div class="developer-role">HSD Fırat Sosyal Medya Komitesi</div>
-              </div>
-            </div>
+          <div class="footer-bottom">
+            <p>&copy; 2025 Vision Fest. Tüm hakları saklıdır.</p>
           </div>
         </div>
-        <div class="footer-bottom">
-          <p>&copy; 2025 Vision Fest. Tüm hakları saklıdır.</p>
-        </div>
-      </div>
-    </footer>
+      </footer>
+    </div>
   </div>
 </template>
 
@@ -85,46 +105,28 @@ export default {
     return {
       isScrolled: false,
       currentSection: 'home',
-      isMobileMenuOpen: false
+      isMobileMenuOpen: false,
+      isLoading: true
     }
   },
   mounted() {
     window.addEventListener('scroll', this.handleScroll)
     window.addEventListener('scroll', this.handleSectionVisibility)
 
-    // URL'deki hash'e göre ilgili bölüme kaydır
-    const hash = window.location.hash.replace('#', '')
-    if (hash) {
-      const target = document.getElementById(hash)
-      if (target) {
-        setTimeout(() => {
-          target.scrollIntoView({ behavior: 'smooth' })
-          this.currentSection = hash
-          target.classList.add('active')
-        }, 100)
-      }
-    } else {
-      // Hash yoksa home bölümünü aktif et
-      const homeSection = document.getElementById('home')
-      if (homeSection) {
-        homeSection.classList.add('active')
-        this.currentSection = 'home'
-      }
-    }
-
     // Smooth scroll için link tıklamalarını dinle
     document.querySelectorAll('.nav-links a, .footer-links a').forEach(link => {
       link.addEventListener('click', (e) => {
         e.preventDefault()
         const targetId = link.getAttribute('href').replace('#', '')
-        const target = document.getElementById(targetId)
-        if (target) {
-          target.scrollIntoView({ behavior: 'smooth' })
-          // Mobil menüyü kapat
-          this.isMobileMenuOpen = false
-        }
+        this.scrollToSection(targetId)
       })
     })
+
+    // Yükleme ekranını 2 saniye sonra kapat
+    setTimeout(() => {
+      this.isLoading = false
+      this.scrollToSection('home')
+    }, 2000)
   },
   beforeUnmount() {
     window.removeEventListener('scroll', this.handleScroll)
@@ -133,6 +135,35 @@ export default {
   methods: {
     handleScroll() {
       this.isScrolled = window.scrollY > 50
+    },
+    scrollToSection(sectionId) {
+      const target = document.getElementById(sectionId)
+      if (target) {
+        // Tüm bölümlerin active class'ını kaldır
+        document.querySelectorAll('.page-section').forEach(el => {
+          el.classList.remove('active')
+        })
+        // Tüm linklerin active class'ını kaldır
+        document.querySelectorAll('.nav-link').forEach(link => {
+          link.classList.remove('active')
+        })
+        // Hedef bölümü ve linki aktif et
+        target.classList.add('active')
+        const activeLink = document.querySelector(`.nav-link[href="#${sectionId}"]`)
+        if (activeLink) {
+          activeLink.classList.add('active')
+        }
+        this.currentSection = sectionId
+        // Scroll işlemi
+        const navbarHeight = document.querySelector('.navbar').offsetHeight
+        const targetPosition = target.offsetTop - navbarHeight
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        })
+        // Mobil menüyü kapat
+        this.isMobileMenuOpen = false
+      }
     },
     handleSectionVisibility() {
       const sections = ['home', 'about', 'speakers', 'partners', 'contact']
@@ -148,9 +179,9 @@ export default {
           if (scrollPosition >= elementTop && scrollPosition <= elementBottom) {
             this.currentSection = section
             element.classList.add('active')
-            // Aktif linki güncelle
             document.querySelectorAll('.nav-link').forEach(link => {
-              if (link.getAttribute('href') === `#${section}`) {
+              const linkHref = link.getAttribute('href').replace('#', '')
+              if (linkHref === section) {
                 link.classList.add('active')
               } else {
                 link.classList.remove('active')
@@ -168,17 +199,90 @@ export default {
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
-html {
-  scroll-behavior: smooth;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
   font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f8f9fa;
+}
+
+.page-transition {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(135deg, #822439 0%, #c41e3a 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeOut 0.5s ease-in-out 2s forwards;
+}
+
+.loader {
+  text-align: center;
+}
+
+.logo-animation {
+  width: 200px;
+  height: auto;
+  animation: logoFloat 2s ease-in-out infinite;
+}
+
+.loading-text {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 20px;
+  letter-spacing: 2px;
+  opacity: 0;
+  animation: textFadeIn 0.5s ease-in-out 0.5s forwards;
+}
+
+@keyframes logoFloat {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-20px) scale(1.1);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes textFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .app {
@@ -229,16 +333,13 @@ html {
   background-color: white;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
 .navbar .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .logo {
@@ -572,5 +673,81 @@ html {
   font-size: 0.8rem;
   text-align: center;
   width: 100%;
+}
+
+/* Router Link Styles */
+.router-link-active {
+  color: #822439 !important;
+}
+
+.router-link-active::after {
+  width: 100% !important;
+}
+
+.nav-link {
+  color: #2F3C4E;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 5px 0;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #822439;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.navbar.scrolled .nav-link {
+  color: white;
+}
+
+.navbar.scrolled .nav-link::after {
+  background-color: white;
+}
+
+.navbar.scrolled .router-link-active {
+  color: white !important;
+}
+
+.main-content {
+  padding-top: 80px; /* Navbar yüksekliği kadar padding */
+}
+
+.page-section {
+  min-height: 100vh;
+  padding: 80px 0;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.page-section.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#home {
+  padding-top: 0;
+  margin-top: -80px;
+}
+
+#contact {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 </style>

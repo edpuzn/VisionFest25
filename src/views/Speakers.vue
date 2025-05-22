@@ -1,17 +1,35 @@
 <template>
-  <div id="speakers" class="speakers-page">
+  <div class="speakers-page">
     <div class="container">
       <h1>UZMAN KONUŞMACILARIMIZ</h1>
-      <p class="subtitle">AI Summit'in değerli konuşmacıları alanında uzman kişilerden oluşmaktadır.</p>
+      <p class="subtitle">FıratVision Fest 2025'te, teknoloji ve girişimcilik dünyasının önde gelen isimleri sizlerle buluşuyor.</p>
       
       <div class="speakers-grid">
         <div v-for="(speaker, index) in speakers" :key="index" class="speaker-card">
           <div class="speaker-image">
             <img :src="speaker.image" :alt="speaker.name" />
+            <div class="speaker-overlay">
+              <div class="social-links">
+                <a v-if="speaker.linkedin" :href="speaker.linkedin" target="_blank" class="social-link">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+                <a v-if="speaker.twitter" :href="speaker.twitter" target="_blank" class="social-link">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a v-if="speaker.github" :href="speaker.github" target="_blank" class="social-link">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
           </div>
           <div class="speaker-info">
             <h3>{{ speaker.name }}</h3>
             <p class="title">{{ speaker.title }}</p>
+            <div class="tags">
+              <span v-for="(tag, tagIndex) in speaker.tags" :key="tagIndex" class="tag">
+                {{ tag }}
+              </span>
+            </div>
             <p v-for="(paragraph, pIndex) in speaker.bio" :key="pIndex" class="bio">{{ paragraph }}</p>
           </div>
         </div>
@@ -30,71 +48,78 @@ export default {
           name: 'Ahmet ŞEKER',
           title: 'Bilişim Uzmanı ve Akademisyen',
           image: require('@/assets/Ahmet_Şeker.jpeg'),
+          tags: ['Yapay Zeka', 'Akademi', 'Bilişim'],
           bio: [
-            'Buğra Ayan, internet teknolojileri ve yapay zeka alanlarında çalışmalar yürüten bir bilişim uzmanıdır. Yüksek lisansını Gazi Üniversitesi\'nde yapay zeka üzerine tamamlamış olup, şu anda doktora çalışmalarına büyük dil modelleri ve blokzincir üzerine devam etmektedir.',
-            'Ankara Üniversitesi ve Hacı Bayram Veli Üniversitesi\'nde dersler vermekte; ayrıca sivil toplum kuruluşlarının kuruluş ve yönetim süreçlerinde aktif olarak yer almaktadır.',
-            'Çalışmaları genellikle yapay zeka, web ve mobil uygulama geliştirme üzerine yoğunlaşmakta; bunun yanı sıra çocuklar için İngilizce kitaplar yazmakta ve yapay zeka eğitimi verme gibi projeler üzerinde çalışmaktadır.'
-          ]
+            'Gazi Üniversitesi\'nde yapay zeka üzerine yüksek lisans yapmış, şu anda doktora çalışmalarına büyük dil modelleri ve blokzincir üzerine devam etmektedir. Ankara Üniversitesi ve Hacı Bayram Veli Üniversitesi\'nde dersler vermektedir.'
+          ],
+          linkedin: 'https://linkedin.com/in/ahmetseker',
+          twitter: 'https://twitter.com/ahmetseker'
         },
         {
           name: 'Burak AYTAN',
           title: 'Endüstri Mühendisi, TOFAŞ',
           image: require('@/assets/Burak_Aytan.jpeg'),
+          tags: ['Endüstri', 'Mühendislik', 'Kalite'],
           bio: [
-            'Özcan Çavuşoğlu, İstanbul Teknik Üniversitesi Endüstri Mühendisliği Bölümü\'nden mezun olmuş ve aynı üniversitede Yönetim Mühendisliği alanında yüksek lisans yapmıştır.',
-            'Kariyerine AVEA İletişim Hizmetleri A.Ş.\'de Organizasyon ve Kalite Uzmanı olarak başlamış; ardından Şekerbank T.A.Ş., Turkcell TL Hattı ve Koçtaş Yapı Marketleri A.Ş. gibi firmalarda süreç yönetimi ve iş geliştirme pozisyonlarında görev almıştır.',
-            '2013 yılında TOFAŞ Türk Otomobil Fabrikası A.Ş.\'ye katılan Çavuşoğlu, burada Kalite Metot ve Planlama Yöneticisi olarak çalışmış, sonrasında Ürün ve Süreç Kalite Mühendisliği Departmanı Başkanı pozisyonuna yükselmiştir.'
-          ]
+            'İstanbul Teknik Üniversitesi Endüstri Mühendisliği Bölümü mezunu olup, aynı üniversitede Yönetim Mühendisliği alanında yüksek lisans yapmıştır. TOFAŞ\'ta Kalite Metot ve Planlama Yöneticisi olarak görev yapmaktadır.'
+          ],
+          linkedin: 'https://linkedin.com/in/burakaytan',
+          twitter: 'https://twitter.com/burakaytan'
         },
         {
           name: 'Can GÖYMEN',
           title: 'Artiwise CEO',
           image: require('@/assets/Can_Göymen.jpeg'),
+          tags: ['Girişimcilik', 'Yazılım', 'İnovasyon'],
           bio: [
-            'Taner Temel, Artiwise şirketinin kurucu ortağı ve CEO\'sudur. 2000 yılında Yıldız Teknik Üniversitesi Matematik Mühendisliği Bölümü\'nden mezun olmuş, 2013 yılında ise Doğuş Üniversitesi\'nde İngilizce İşletme (MBA) yüksek lisansını tamamlamıştır.',
-            'Kariyerine yazılım firmalarında başlayan Temel, Toyota ve Turkcell Global Bilgi gibi büyük şirketlerde yazılım geliştirme mühendisliği ve yöneticilik pozisyonlarında deneyim kazanmıştır.',
-            'Büyük ölçekli firmaların müşteri geri bildirimlerini yönetmekte yaşadığı zorlukları fark ederek, yapay zeka ve doğal dil işleme teknolojilerini kullanarak müşteri deneyimini iyileştirmeyi hedefleyen Artiwise\'ı kurmuştur.'
-          ]
+            'Yıldız Teknik Üniversitesi Matematik Mühendisliği mezunu olup, Doğuş Üniversitesi\'nde MBA yapmıştır. Toyota ve Turkcell Global Bilgi\'de deneyim kazanmış, yapay zeka ve doğal dil işleme teknolojileriyle müşteri deneyimini iyileştiren Artiwise\'ı kurmuştur.'
+          ],
+          linkedin: 'https://linkedin.com/in/cangoymen',
+          twitter: 'https://twitter.com/cangoymen'
         },
         {
           name: 'Kaan YENİYOL',
           title: 'Teknoloji ve İnovasyon Lideri',
           image: require('@/assets/Kaan_Yeniyol.jpeg'),
+          tags: ['Teknoloji', 'İnovasyon', 'Strateji'],
           bio: [
-            'Ahmet Oktay, Doğu Akdeniz Üniversitesi Bilgisayar Mühendisliği Bölümü\'nden mezun olmuş; teknoloji ve inovasyon dünyasında stratejik danışmanlık hizmetleriyle öne çıkan bir liderdir.',
-            'Alzmir Hub ve BSP Group gibi öncü kuruluşlarla iş birliği yaparak yapay zeka stratejileri ve dijital dönüşüm projelerinde önemli roller üstlenmektedir.',
-            'Ayrıca Mersin Kent Konseyi\'nde "Herkes İçin Bilişim Komitesi" başkanı olarak, Mersin\'i teknoloji alanında öncü bir şehir yapmak için çalışmaktadır.'
-          ]
+            'Doğu Akdeniz Üniversitesi Bilgisayar Mühendisliği mezunu olup, teknoloji ve inovasyon dünyasında stratejik danışmanlık hizmetleriyle öne çıkan bir liderdir. Alzmir Hub ve BSP Group ile yapay zeka stratejileri ve dijital dönüşüm projelerinde çalışmaktadır.'
+          ],
+          linkedin: 'https://linkedin.com/in/kaanyeniyol',
+          twitter: 'https://twitter.com/kaanyeniyol'
         },
         {
           name: 'Kübra BİLGİC',
           title: 'Teknoloji Danışmanı, eski Microsoft Yöneticisi',
           image: require('@/assets/Kübra_Bilgic.jpeg'),
+          tags: ['Teknoloji', 'Danışmanlık', 'Microsoft'],
           bio: [
-            'Abdurrahman Bulut, 1990 yılında ODTÜ Elektronik Mühendisliği Bölümü\'nden mezun olmuştur. 30 yıllık bilgi teknolojileri kariyerinin 20 yılını yurt dışında geçirmiştir. 8 yıl Kanada\'da çeşitli şirketlerde, son 12 yıl ise Suudi Arabistan\'da Microsoft\'ta çalışmıştır.',
-            'Microsoft\'taki son görevi, Suudi Arabistan Batı Bölgesi Projeler Koordinatörlüğü\'dür. 2020 Ekim itibarıyla kesin dönüş yapmış; teknoloji felsefesi ve yaşadığımız çağa tanıklık etme çerçevesinde okuma, düşünme ve paylaşma üzerine çalışmalara yoğunlaşmıştır.',
-            '2019 yılından itibaren yapay zeka, teknoloji felsefesi, dataizm konularında açık ve kapalı konferanslar/sunumlar; lise ve dengi okullarda ise kariyer, motivasyon, başarı ve yurt dışında kariyer yapmak başlıklarında konuşmalar yapmaktadır.'
-          ]
+            'ODTÜ Elektronik Mühendisliği mezunu olup, 30 yıllık bilgi teknolojileri kariyerinin 20 yılını yurt dışında geçirmiştir. Microsoft\'ta Suudi Arabistan Batı Bölgesi Projeler Koordinatörlüğü yapmış, şu anda teknoloji danışmanlığı hizmeti vermektedir.'
+          ],
+          linkedin: 'https://linkedin.com/in/kubrabilgic',
+          twitter: 'https://twitter.com/kubrabilgic'
         },
         {
           name: 'Murat ÇELİK',
           title: 'Monster Notebook ve Semruk Games Kurucusu',
           image: require('@/assets/Murat_Celik.jpeg'),
+          tags: ['Girişimcilik', 'Oyun', 'Teknoloji'],
           bio: [
-            'İlhan Yılmaz, Marmara Üniversitesi\'nden 1996 yılında mezun oldu. 2000 yılında Meryem Yılmaz ile birlikte Fokus Bilgisayar\'ı kurdu. Firma, ilk yıllarında teknoloji firmalarına toptan bilgisayar malzemeleri satışı yapıyordu. 2005 yılında ise Monster Notebook markası doğdu ve firmanın ilk bilgisayarları üretilip satılmaya başlandı.',
-            'Bugün gelinen noktada Monster Notebook, Türkiye\'de oyun bilgisayarı pazarında ilk 3 sırada yer alıyor. İstanbul, Ankara ve İzmir\'deki mağazalarıyla ve Monster Notebook Dijital Mağazası ile Türkiye\'nin her noktasındaki son kullanıcıya ulaşıyor.',
-            'Semruk Games, sosyal farkındalık gerektiren konulara dijital oyunlar aracılığıyla dikkat çekmek amacıyla 2021 Ekim ayında kuruldu.'
-          ]
+            'Marmara Üniversitesi mezunu olup, 2000 yılında Fokus Bilgisayar\'ı kurmuştur. Monster Notebook markasıyla Türkiye\'de oyun bilgisayarı pazarında ilk 3 sırada yer alan şirketin kurucusudur. Semruk Games ile sosyal farkındalık projeleri geliştirmektedir.'
+          ],
+          linkedin: 'https://linkedin.com/in/muratcelik',
+          twitter: 'https://twitter.com/muratcelik'
         },
         {
           name: 'Sertay KABUK',
           title: 'Mecostech Kurucusu, VR/AR Teknolojileri Uzmanı',
           image: require('@/assets/Sertay_Kabuk.jpeg'),
+          tags: ['VR/AR', 'Teknoloji', 'Girişimcilik'],
           bio: [
-            'Muhammed Coşgun, Uludağ Üniversitesi mezunu bir teknoloji girişimcisidir. Kurucusu olduğu Mecostech firması bünyesinde; VR, AR ve XR tabanlı havacılık, lojistik ve sağlık teknolojileri alanında projeler geliştirmekte, yapay zekâ ve yazılım çözümleriyle farklı sektörlerin ihtiyaçlarına yenilikçi yaklaşımlar sunmaktadır.',
-            'Havacılıktan sağlığa uzanan geniş bir yelpazede, dijital uygulamalar üzerine yapay zekâ destekli VR/AR/XR yazılım geliştirme faaliyetlerini sürdürmektedir.',
-            'Teknoloji ile sağlığı buluşturan projelere öncülük eden Coşgun, çeşitli üniversitelerde ve teknoloji topluluklarında bilgi ve deneyimlerini paylaşarak genç girişimcilere ilham vermeye devam etmektedir.'
-          ]
+            'Uludağ Üniversitesi mezunu bir teknoloji girişimcisidir. Mecostech firması bünyesinde VR, AR ve XR tabanlı havacılık, lojistik ve sağlık teknolojileri alanında projeler geliştirmekte, yapay zekâ destekli yazılım çözümleri sunmaktadır.'
+          ],
+          linkedin: 'https://linkedin.com/in/sertaykabuk',
+          twitter: 'https://twitter.com/sertaykabuk'
         }
       ]
     }
@@ -104,17 +129,9 @@ export default {
 
 <style scoped>
 .speakers-page {
-  padding: 120px 0 80px;
-  background-color: #f8f9fa;
-  overflow: hidden;
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.speakers-page.active {
-  opacity: 1;
-  transform: translateY(0);
+  padding: 120px 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  min-height: 100vh;
 }
 
 .container {
@@ -125,158 +142,183 @@ export default {
 
 h1 {
   text-align: center;
-  margin-bottom: 20px;
-  color: #333;
-  font-size: 2.5rem;
+  color: #2F3C4E;
+  font-size: 3rem;
   font-weight: 700;
-  text-transform: uppercase;
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+h1::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #822439, #c41e3a);
+  border-radius: 3px;
 }
 
 .subtitle {
   text-align: center;
-  color: #666;
+  color: #2F3C4E;
   font-size: 1.2rem;
   margin-bottom: 60px;
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.2s forwards;
+  opacity: 0.8;
+  font-family: 'Poppins', sans-serif;
 }
 
 .speakers-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 40px;
-  max-width: 1200px;
-  margin: 0 auto;
+  gap: 30px;
+  margin-top: 40px;
 }
 
 .speaker-card {
   display: flex;
   background: white;
-  border-radius: 15px;
+  border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  opacity: 0;
-  transform: translateX(-50px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  height: 300px;
 }
 
-.speakers-page.active .speaker-card:nth-child(1) { animation: slideInRight 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.4s forwards; }
-.speakers-page.active .speaker-card:nth-child(2) { animation: slideInRight 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.6s forwards; }
-.speakers-page.active .speaker-card:nth-child(3) { animation: slideInRight 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.8s forwards; }
-.speakers-page.active .speaker-card:nth-child(4) { animation: slideInRight 0.8s cubic-bezier(0.4, 0, 0.2, 1) 1s forwards; }
-.speakers-page.active .speaker-card:nth-child(5) { animation: slideInRight 0.8s cubic-bezier(0.4, 0, 0.2, 1) 1.2s forwards; }
-.speakers-page.active .speaker-card:nth-child(6) { animation: slideInRight 0.8s cubic-bezier(0.4, 0, 0.2, 1) 1.4s forwards; }
-.speakers-page.active .speaker-card:nth-child(7) { animation: slideInRight 0.8s cubic-bezier(0.4, 0, 0.2, 1) 1.6s forwards; }
-.speakers-page.active .speaker-card:nth-child(8) { animation: slideInRight 0.8s cubic-bezier(0.4, 0, 0.2, 1) 1.8s forwards; }
-
 .speaker-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
 
 .speaker-image {
   flex: 0 0 300px;
-  height: 420px;
+  height: 100%;
   overflow: hidden;
   position: relative;
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px;
-  margin: 10px;
 }
 
 .speaker-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
-  transition: all 0.3s ease;
-  border-radius: 10px;
-}
-
-.speaker-card:hover .speaker-image {
-  z-index: 1;
+  transition: transform 0.3s ease;
 }
 
 .speaker-card:hover .speaker-image img {
-  transform: scale(1.05);
+  transform: scale(1.1);
+}
+
+.speaker-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(130, 36, 57, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.speaker-card:hover .speaker-overlay {
+  opacity: 1;
+}
+
+.social-links {
+  display: flex;
+  gap: 20px;
+}
+
+.social-link {
+  color: white;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.social-link:hover {
+  transform: scale(1.2);
 }
 
 .speaker-info {
   flex: 1;
-  padding: 40px;
+  padding: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  position: relative;
-  z-index: 1;
-  height: 450px;
-  overflow-y: auto;
 }
 
 .speaker-info h3 {
   color: #2F3C4E;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   margin-bottom: 10px;
   font-weight: 600;
+  font-family: 'Poppins', sans-serif;
 }
 
 .speaker-info .title {
-  color: #007bff;
-  font-size: 1rem;
-  font-weight: 500;
+  color: #822439;
+  font-size: 1.1rem;
   margin-bottom: 15px;
+  font-weight: 500;
   font-family: 'Poppins', sans-serif;
 }
 
-.speaker-info .bio {
-  color: #666;
-  line-height: 1.5;
-  margin-bottom: 10px;
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tag {
+  background: rgba(130, 36, 57, 0.1);
+  color: #822439;
+  padding: 5px 15px;
+  border-radius: 20px;
   font-size: 0.9rem;
+  font-weight: 500;
   font-family: 'Poppins', sans-serif;
 }
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideInRight {
-  from {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+.bio {
+  color: #2F3C4E;
+  line-height: 1.6;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  font-family: 'Poppins', sans-serif;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 @media (max-width: 768px) {
   .speakers-page {
-    padding: 100px 0 60px;
+    padding: 80px 0;
   }
 
   h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
   .subtitle {
     font-size: 1.1rem;
     margin-bottom: 40px;
+  }
+
+  .speakers-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
   }
 
   .speaker-card {
@@ -290,20 +332,23 @@ h1 {
   }
 
   .speaker-info {
-    padding: 30px;
-    height: auto;
+    padding: 20px;
   }
 
   .speaker-info h3 {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
 
   .speaker-info .title {
-    font-size: 0.95rem;
+    font-size: 1rem;
   }
 
-  .speaker-info .bio {
-    font-size: 0.85rem;
+  .tag {
+    font-size: 0.8rem;
+  }
+
+  .bio {
+    font-size: 0.9rem;
   }
 }
 </style> 

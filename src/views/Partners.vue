@@ -1,14 +1,47 @@
 <template>
-  <div id="partners" class="partners-page">
+  <div class="partners-page">
     <div class="container">
-      <h1>ETKİNLİK PAYDAŞLARI</h1>
-      <p class="subtitle">AI Summit'in gerçekleşmesine katkı sağlayan değerli paydaşlarımız.</p>
-      
+      <h2>Paydaşlarımız</h2>
       <div class="partners-grid">
-        <div v-for="(partner, index) in partners" :key="index" class="partner-card">
-          <div class="partner-image">
-            <img :src="partner.image" :alt="partner.name" />
-          </div>
+        <div class="partner-card">
+          <img src="@/assets/huawei.png" alt="Huawei" />
+          <h3>Huawei</h3>
+          <p>Ana Paydaş</p>
+        </div>
+        <div class="partner-card">
+          <img src="@/assets/firat.png" alt="Fırat Üniversitesi" />
+          <h3>Fırat Üniversitesi</h3>
+          <p>Ana Paydaş</p>
+        </div>
+        <div class="partner-card">
+          <img src="@/assets/HSD.png" alt="HSD Fırat" />
+          <h3>HSD Fırat</h3>
+          <p>Organizatör</p>
+        </div>
+        <div class="partner-card">
+          <img src="@/assets/doğus.png" alt="Doğuş" />
+          <h3>Doğuş</h3>
+          <p>Platin Paydaş</p>
+        </div>
+        <div class="partner-card">
+          <img src="@/assets/dias.png" alt="Dias Curiosity" />
+          <h3>Dias Curiosity</h3>
+          <p>Platin Paydaş</p>
+        </div>
+        <div class="partner-card">
+          <img src="@/assets/UNIDES.png" alt="Dias Curiosity" />
+          <h3>Ünides</h3>
+          <p>Platin Paydaş</p>
+        </div>
+        <div class="partner-card">
+          <img src="@/assets/turk-telekom.png" alt="Türk Telekom" />
+          <h3>Türk Telekom</h3>
+          <p>Platin Paydaş</p>
+        </div>
+        <div class="partner-card">
+          <img src="@/assets/TURKCELL.png" alt="Turkcell" />
+          <h3>Turkcell</h3>
+          <p>Platin Paydaş</p>
         </div>
       </div>
     </div>
@@ -17,53 +50,14 @@
 
 <script>
 export default {
-  name: 'PartnersPage',
-  data() {
-    return {
-      partners: [
-        {
-          name: 'Atatürk Üniversitesi',
-          image: require('@/assets/ATAUNİ.png')
-        },
-        {
-          name: 'ATASOFT',
-          image: require('@/assets/ATASOFT.png')
-        },
-        {
-          name: 'Gençlik ve Spor Bakanlığı',
-          image: require('@/assets/GSB.png')
-        },
-        {
-          name: 'TÜGVA',
-          image: require('@/assets/TUGVA.png')
-        },
-        {
-          name: 'HSD',
-          image: require('@/assets/HSD.png')
-        },
-        {
-          name: 'TAZI',
-          image: require('@/assets/TAZI.png')
-        },
-        {
-          name: 'ARTIWİSE',
-          image: require('@/assets/ARTIWİSE.png')
-        },
-        {
-          name: 'UNIDES',
-          image: require('@/assets/UNIDES.png')
-        }
-      ]
-    }
-  }
+  name: 'PartnersPage'
 }
 </script>
 
 <style scoped>
 .partners-page {
-  padding: 120px 0 80px;
-  background-color: #f8f9fa;
-  overflow: hidden;
+  padding: 80px 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
 }
 
 .container {
@@ -72,155 +66,90 @@ export default {
   padding: 0 20px;
 }
 
-h1 {
+h2 {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 60px;
   color: #2F3C4E;
   font-size: 2.5rem;
   font-weight: 700;
   text-transform: uppercase;
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeInUp 0.8s ease forwards;
   font-family: 'Poppins', sans-serif;
+  position: relative;
 }
 
-.subtitle {
-  text-align: center;
-  color: #2F3C4E;
-  font-size: 1.2rem;
-  margin-bottom: 60px;
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeInUp 0.8s ease 0.2s forwards;
-  font-family: 'Poppins', sans-serif;
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #822439, #c41e3a);
+  border-radius: 3px;
 }
 
 .partners-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 40px;
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeInUp 0.8s ease 0.4s forwards;
+  margin-top: 40px;
 }
 
 .partner-card {
   background: white;
-  border-radius: 15px;
   padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   text-align: center;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-  cursor: pointer;
-  transform: translateY(0);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(130, 36, 57, 0.1);
 }
-
-.partner-card:nth-child(2) { animation-delay: 0.2s; }
-.partner-card:nth-child(3) { animation-delay: 0.4s; }
-.partner-card:nth-child(4) { animation-delay: 0.6s; }
-.partner-card:nth-child(5) { animation-delay: 0.8s; }
-.partner-card:nth-child(6) { animation-delay: 1s; }
-.partner-card:nth-child(7) { animation-delay: 1.2s; }
-.partner-card:nth-child(8) { animation-delay: 1.4s; }
 
 .partner-card:hover {
-  transform: translateY(-15px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
-.partner-image {
-  width: 100%;
-  height: 180px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.partner-image img {
-  max-width: 100%;
-  max-height: 100%;
+.partner-card img {
+  width: 150px;
+  height: 150px;
   object-fit: contain;
-  filter: grayscale(100%);
-  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-  transform: scale(0.9);
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
 }
 
-.partner-card:hover .partner-image img {
-  filter: grayscale(0%);
-  transform: scale(1);
+.partner-card:hover img {
+  transform: scale(1.05);
 }
 
-.partner-card:active {
-  transform: translateY(-10px);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+.partner-card h3 {
+  color: #2F3C4E;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
 }
 
-.partner-card:active .partner-image img {
-  filter: grayscale(0%);
-  transform: scale(1.1);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideInRight {
-  from {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes scaleIn {
-  from {
-    transform: scale(0.9);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
+.partner-card p {
+  color: #822439;
+  font-size: 1.1rem;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
 }
 
 @media (max-width: 768px) {
   .partners-page {
-    padding: 100px 0 60px;
+    padding: 60px 0;
   }
 
-  h1 {
+  h2 {
     font-size: 2rem;
-  }
-
-  .subtitle {
-    font-size: 1.1rem;
     margin-bottom: 40px;
   }
 
   .partners-grid {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: 1fr;
     gap: 30px;
   }
 
@@ -228,8 +157,17 @@ h1 {
     padding: 20px;
   }
 
-  .partner-image {
+  .partner-card img {
+    width: 120px;
     height: 120px;
+  }
+
+  .partner-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .partner-card p {
+    font-size: 1rem;
   }
 }
 </style> 
