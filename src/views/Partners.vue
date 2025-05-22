@@ -45,7 +45,7 @@
           <p>Platin Paydaş</p>
         </div>
         <div class="partner-card">
-          <img src="@/assets/gsb.png" alt="gsb" />
+          <img src="@/assets/GSB.png" alt="gsb" />
           <h3>Gençlik ve spor bakanlığı</h3>
           <p>Platin Paydaş</p>
         </div>
