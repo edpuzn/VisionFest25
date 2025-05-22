@@ -69,7 +69,7 @@ export default {
         {
           name: 'Can GÖYMEN',
           title: 'Artiwise CEO',
-          image: require('@/assets/Can_Göymen.jpeg'),
+          image: require('@/assets/Can_Goymen.jpeg'),
           tags: ['Girişimcilik', 'Yazılım', 'İnovasyon'],
           bio: [
             'Yıldız Teknik Üniversitesi Matematik Mühendisliği mezunu olup, Doğuş Üniversitesi\'nde MBA yapmıştır. Toyota ve Turkcell Global Bilgi\'de deneyim kazanmış, yapay zeka ve doğal dil işleme teknolojileriyle müşteri deneyimini iyileştiren Artiwise\'ı kurmuştur.'
@@ -91,7 +91,7 @@ export default {
         {
           name: 'Kübra BİLGİC',
           title: 'Teknoloji Danışmanı, eski Microsoft Yöneticisi',
-          image: require('@/assets/Kübra_Bilgic.jpeg'),
+          image: require('@/assets/Kubra_Bilgic.jpeg'),
           tags: ['Teknoloji', 'Danışmanlık', 'Microsoft'],
           bio: [
             'ODTÜ Elektronik Mühendisliği mezunu olup, 30 yıllık bilgi teknolojileri kariyerinin 20 yılını yurt dışında geçirmiştir. Microsoft\'ta Suudi Arabistan Batı Bölgesi Projeler Koordinatörlüğü yapmış, şu anda teknoloji danışmanlığı hizmeti vermektedir.'

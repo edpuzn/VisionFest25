@@ -19,7 +19,7 @@
           <p>Organizatör</p>
         </div>
         <div class="partner-card">
-          <img src="@/assets/doğus.png" alt="Doğuş" />
+          <img src="@/assets/dogus.png" alt="Doğuş" />
           <h3>Doğuş</h3>
           <p>Platin Paydaş</p>
         </div>
