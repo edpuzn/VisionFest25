@@ -47,7 +47,7 @@ export default {
         {
           name: 'Ahmet ŞEKER',
           title: 'Bilişim Uzmanı ve Akademisyen',
-          image: require('@/assets/Ahmet_Şeker.jpeg'),
+          image: require('@/assets/Ahmet_Seker.jpeg'),
           tags: ['Yapay Zeka', 'Akademi', 'Bilişim'],
           bio: [
             'Gazi Üniversitesi\'nde yapay zeka üzerine yüksek lisans yapmış, şu anda doktora çalışmalarına büyük dil modelleri ve blokzincir üzerine devam etmektedir. Ankara Üniversitesi ve Hacı Bayram Veli Üniversitesi\'nde dersler vermektedir.'
