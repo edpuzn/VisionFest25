@@ -7,10 +7,7 @@
           <i class="fas fa-map-marker-alt"></i>
           <div class="info-content">
             <h3>Adres</h3>
-            <p>Nurettin Ardıçoğlu Kampüsü</p>
-            <a href="https://maps.app.goo.gl/8QZQZQZQZQZQZQZQZ" target="_blank" class="map-link">
-              <i class="fas fa-map"></i> Haritada Göster
-            </a>
+            <p>Mustafa Temizer Konferans Salonu</p>
           </div>
         </div>
         <div class="info-item">
@@ -137,8 +134,11 @@ export default {
 }
 
 .map-container iframe {
-  border-radius: 0 20px 20px 0; /* Sağ köşeleri yuvarlak yap */
-  display: block; /* İframe'in tam genişlik almasını sağla */
+  border-radius: 0 20px 20px 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
 }
 
 @media (max-width: 768px) {
