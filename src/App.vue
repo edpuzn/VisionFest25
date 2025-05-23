@@ -71,7 +71,9 @@
             </div>
             <div class="developer-details">
               <div class="developer-title">Developer</div>
-              <h3>Edip UZAN</h3>
+              <a href="https://www.linkedin.com/in/edipuzan/" target="_blank" class="developer-name">
+                <h3>Edip UZAN</h3>
+              </a>
               <div class="developer-role">HSD Fırat Sosyal Medya Komitesi</div>
             </div>
           </div>
@@ -615,6 +617,7 @@ html {
   flex-direction: column;
   gap: 4px;
   padding-left: 5px;
+  position: relative;
 }
 
 .developer-title {
@@ -626,12 +629,22 @@ html {
   opacity: 0.8;
 }
 
-.developer-details h3 {
+.developer-name {
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.developer-name:hover h3 {
+  color: #0077b5;
+}
+
+.developer-name h3 {
   color: white;
   font-size: 0.95rem;
   margin: 0;
   font-weight: 600;
   letter-spacing: 0.5px;
+  transition: all 0.3s ease;
 }
 
 .developer-role {
