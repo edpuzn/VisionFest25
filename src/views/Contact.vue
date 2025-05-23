@@ -7,7 +7,7 @@
           <i class="fas fa-map-marker-alt"></i>
           <div class="info-content">
             <h3>Adres</h3>
-            <p>Mustafa Temizer Konferans Salonu</p>
+            <p>Prof. Dr. Mustafa Temizer Konferans Salonu</p>
           </div>
         </div>
         <div class="info-item">
