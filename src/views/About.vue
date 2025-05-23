@@ -54,19 +54,19 @@
 
         <div class="stats-section">
           <div class="stat-card">
-            <div class="stat-number">50+</div>
+            <div class="stat-number">8+</div>
             <div class="stat-label">Konuşmacı</div>
           </div>
           <div class="stat-card">
-            <div class="stat-number">1000+</div>
+            <div class="stat-number">500+</div>
             <div class="stat-label">Katılımcı</div>
           </div>
           <div class="stat-card">
-            <div class="stat-number">20+</div>
-            <div class="stat-label">Atölye</div>
+            <div class="stat-number">7+</div>
+            <div class="stat-label">Oturum</div>
           </div>
           <div class="stat-card">
-            <div class="stat-number">3</div>
+            <div class="stat-number">1</div>
             <div class="stat-label">Gün</div>
           </div>
         </div>
@@ -76,6 +76,7 @@
 </template>
 
 <script>
+// eslint-disable-next-line
 export default {
   name: 'AboutPage'
 }
@@ -83,8 +84,8 @@ export default {
 
 <style scoped>
 .about-page {
-  min-height: 100vh;
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 80px 0;
+
 }
 
 .hero-section {

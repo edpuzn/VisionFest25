@@ -5,9 +5,14 @@
       <p class="section-subtitle">Teknoloji ve İnovasyonun Güçlü İş Ortakları</p>
       <div class="partners-grid">
         <div class="partner-card">
-          <img src="@/assets/huawei.png" alt="Huawei" />
-          <h3>Huawei</h3>
-          <p>Ana Paydaş</p>
+          <img src="@/assets/GSB.png" alt="gsb" />
+          <h3>Gençlik ve Spor Bakanlığı</h3>
+          <p>Platin Paydaş</p>
+        </div>
+        <div class="partner-card">
+          <img src="@/assets/UNIDES.png" alt="Dias Curiosity" />
+          <h3>ÜNİDES</h3>
+          <p>Platin Paydaş</p>
         </div>
         <div class="partner-card">
           <img src="@/assets/firat.png" alt="Fırat Üniversitesi" />
@@ -15,23 +20,23 @@
           <p>Ana Paydaş</p>
         </div>
         <div class="partner-card">
+          <img src="@/assets/huawei.png" alt="Huawei" />
+          <h3>Huawei</h3>
+          <p>Ana Paydaş</p>
+        </div>
+        <div class="partner-card">
           <img src="@/assets/HSD.png" alt="HSD Fırat" />
-          <h3>HSD Fırat</h3>
+          <h3>Huawei Student Developers Fırat</h3>
           <p>Organizatör</p>
         </div>
         <div class="partner-card">
           <img src="@/assets/dogus.png" alt="Doğuş" />
-          <h3>Doğuş</h3>
+          <h3>Doğuş Group</h3>
           <p>Platin Paydaş</p>
         </div>
         <div class="partner-card">
           <img src="@/assets/dias.png" alt="Dias Curiosity" />
           <h3>Dias Curiosity</h3>
-          <p>Platin Paydaş</p>
-        </div>
-        <div class="partner-card">
-          <img src="@/assets/UNIDES.png" alt="Dias Curiosity" />
-          <h3>Ünides</h3>
           <p>Platin Paydaş</p>
         </div>
         <div class="partner-card">
@@ -44,10 +49,25 @@
           <h3>Turkcell</h3>
           <p>Platin Paydaş</p>
         </div>
+      </div>
+
+      <h2 class="section-title supporters-title">DESTEKÇİLERİMİZ</h2>
+      <p class="section-subtitle">Etkinliğimize Katkı Sağlayan Değerli Destekçilerimiz</p>
+      <div class="partners-grid supporters-grid">
         <div class="partner-card">
-          <img src="@/assets/GSB.png" alt="gsb" />
-          <h3>Gençlik ve spor bakanlığı</h3>
-          <p>Platin Paydaş</p>
+          <img src="@/assets/Luuq.png" alt="LUUQ" />
+          <h3>Luuq</h3>
+          <p>Catering Sponsorluğu</p>
+        </div>
+        <div class="partner-card">
+          <img src="@/assets/Cınar.jpg" alt="Çınar" />
+          <h3>Tarihi Ulu Çınar Restorant</h3>
+          <p>Catering Sponsorluğu</p>
+        </div>
+        <div class="partner-card">
+          <img src="@/assets/Akgun.png" alt="Akgün" />
+          <h3>Akgün Otel</h3>
+          <p>Konaklama Desteği</p>
         </div>
       </div>
     </div>
@@ -55,6 +75,7 @@
 </template>
 
 <script>
+// eslint-disable-next-line
 export default {
   name: 'PartnersPage'
 }
@@ -63,7 +84,7 @@ export default {
 <style scoped>
 .partners-page {
   padding: 80px 0;
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  /* background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); Arka plan kaldırıldı */
 }
 
 .container {
@@ -163,6 +184,22 @@ h2::after {
   font-family: 'Poppins', sans-serif;
 }
 
+.supporters-title {
+  margin-top: 80px;
+}
+
+.supporters-grid {
+  margin-top: 40px;
+}
+
+.supporters-grid .partner-card {
+  background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+}
+
+.supporters-grid .partner-card:hover {
+  background: linear-gradient(135deg, #fff 0%, #f0f2f5 100%);
+}
+
 @media (max-width: 768px) {
   .partners-page {
     padding: 60px 0;
@@ -193,6 +230,10 @@ h2::after {
 
   .partner-card p {
     font-size: 1rem;
+  }
+
+  .supporters-title {
+    margin-top: 60px;
   }
 }
 </style> 

@@ -84,11 +84,12 @@
 </template>
 
 <script>
+// eslint-disable-next-line
 export default {
   name: 'HomePage',
   data() {
     return {
-      eventDate: new Date('2025-05-29T00:00:00'),
+      eventDate: new Date('2025-05-29T09:30:30'),
       days: '00',
       hours: '00',
       minutes: '00',
@@ -223,7 +224,7 @@ export default {
 <style scoped>
 .home-page {
   min-height: 100vh;
-  overflow: hidden;
+ overflow: hidden;
 }
 
 .hero {
@@ -330,6 +331,19 @@ h1::after {
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
 }
 
+.subtitle {
+  font-size: 1.6rem;
+  margin-bottom: 30px;
+  font-weight: 300;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.2s forwards;
+  font-family: 'Poppins', sans-serif;
+  color: rgba(255, 255, 255, 0.9);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
 .date {
   font-size: 1.6rem;
   margin-bottom: 30px;
@@ -376,7 +390,7 @@ h1::after {
   text-transform: uppercase;
   font-weight: 400;
   font-family: 'Poppins', sans-serif;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgb(255, 255, 255);
   letter-spacing: 2px;
   margin-top: 8px;
 }
@@ -429,7 +443,7 @@ h1::after {
 
 .about-section {
   padding: 100px 0;
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+
   opacity: 1;
   transform: translateY(0);
   position: relative;
@@ -653,6 +667,11 @@ h1::after {
   h1 {
     font-size: 2.5rem;
     letter-spacing: 2px;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
   }
 
   .date {

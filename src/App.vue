@@ -4,6 +4,7 @@
   <div class="loader">
     <img src="@/assets/logo_sade.png" alt="FıratVision Fest Logo" class="logo-animation">
     <div class="loading-text">FIRAT VISION FEST 2025</div>
+    <div class="loading-subtitle">BUGÜNÜN VİZYONU, YARININ TEKNOLOJİSİ</div>
   </div>
 </div>
 <div v-else>
@@ -11,7 +12,7 @@
     <div class="container">
       <div class="logo">
         <a href="#home" @click.prevent="scrollToSection('home')">
-          <img :src="isScrolled ? require('@/assets/logo_sade.png') : require('@/assets/logo.png')" alt="Vision Fest Logo" />
+          <img :src="isScrolled ? require('@/assets/logo.png') : require('@/assets/logo_sade.png')" alt="Vision Fest Logo" />
         </a>
       </div>
       <div class="nav-links" :class="{ active: isMobileMenuOpen }">
@@ -251,6 +252,16 @@ body {
   animation: textFadeIn 0.5s ease-in-out 0.5s forwards;
 }
 
+.loading-subtitle {
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-top: 15px;
+  letter-spacing: 2px;
+  opacity: 0;
+  animation: textFadeIn 0.5s ease-in-out 0.5s forwards;
+}
+
 @keyframes logoFloat {
   0% {
     transform: translateY(0) scale(1);
@@ -311,29 +322,17 @@ html {
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  background: rgba(255, 255, 255, 0.95);
-  padding: 20px 0;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
   z-index: 1000;
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  background: transparent;
+  transition: all 0.3s ease;
+  padding: 20px 0;
 }
 
 .navbar.scrolled {
-  background: rgba(130, 36, 57, 0.95);
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   padding: 15px 0;
-}
-
-.navbar.scrolled .nav-links a {
-  color: white;
-}
-
-.navbar.scrolled .nav-links a:hover {
-  color: rgba(255, 255, 255, 0.8);
-}
-
-.navbar.scrolled .nav-links a::after {
-  background-color: white;
 }
 
 .navbar .container {
@@ -345,17 +344,9 @@ html {
   padding: 0 20px;
 }
 
-.logo {
-  z-index: 1001;
-}
-
 .logo img {
   height: 50px;
   transition: all 0.3s ease;
-}
-
-.navbar.scrolled .logo img {
-  height: 55px;
 }
 
 .nav-links {
@@ -366,22 +357,29 @@ html {
 .nav-link {
   color: #2F3C4E;
   text-decoration: none;
-  font-size: 1.1rem;
   font-weight: 500;
+  font-size: 1.1rem;
   transition: all 0.3s ease;
   position: relative;
-  padding: 5px 0;
+}
+
+.navbar .nav-link {
+  color: white;
 }
 
 .nav-link::after {
   content: '';
   position: absolute;
-  bottom: 0;
+  bottom: -5px;
   left: 0;
   width: 0;
   height: 2px;
-  background-color: #822439;
+  background: #822439;
   transition: width 0.3s ease;
+}
+
+.navbar.scrolled .nav-link::after {
+  background: #822439;
 }
 
 .nav-link:hover::after,
@@ -389,9 +387,8 @@ html {
   width: 100%;
 }
 
-.nav-link:hover,
-.nav-link.active {
-  color: #822439;
+.navbar.scrolled .router-link-active {
+  color: white !important;
 }
 
 .mobile-menu-btn {
@@ -406,21 +403,17 @@ html {
   display: block;
   width: 30px;
   height: 3px;
-  background-color: #2F3C4E;
+  background: #2F3C4E;
   transition: all 0.3s ease;
 }
 
 .navbar.scrolled .mobile-menu-btn span {
-  background-color: white;
+  background: #ffffff;
 }
 
 @media (max-width: 768px) {
-  .navbar {
-    padding: 15px 0;
-  }
-
-  .logo img {
-    height: 40px;
+  .mobile-menu-btn {
+    display: flex;
   }
 
   .nav-links {
@@ -429,11 +422,12 @@ html {
     right: -100%;
     width: 100%;
     height: 100vh;
-    background: rgba(130, 36, 57, 0.95);
+    background: rgba(130, 36, 57, 0.98);
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    gap: 40px;
+    transition: right 0.3s ease;
     z-index: 1000;
   }
 
@@ -441,22 +435,25 @@ html {
     right: 0;
   }
 
+  .nav-links.active ~ .mobile-menu-btn span {
+    background: #ffffff !important;
+  }
+
   .nav-link {
-    color: white;
+    color: white !important;
     font-size: 1.3rem;
-    margin: 15px 0;
+  }
+
+  .navbar.scrolled .nav-link {
+    color: white !important;
   }
 
   .nav-link::after {
-    background-color: white;
-  }
-
-  .mobile-menu-btn {
-    display: flex;
+    background: white !important;
   }
 
   .mobile-menu-btn.active span:nth-child(1) {
-    transform: translateY(9px) rotate(45deg);
+    transform: rotate(45deg) translate(8px, 8px);
   }
 
   .mobile-menu-btn.active span:nth-child(2) {
@@ -464,7 +461,29 @@ html {
   }
 
   .mobile-menu-btn.active span:nth-child(3) {
-    transform: translateY(-9px) rotate(-45deg);
+    transform: rotate(-45deg) translate(7px, -7px);
+  }
+
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 30px 0;
+    background: rgba(130, 36, 57, 0.95);
+  }
+
+  .mobile-menu-btn span {
+    background: #ffffff;
+  }
+
+  .navbar.scrolled .mobile-menu-btn span {
+    background: rgba(130, 36, 57, 0.95);
+  }
+
+  #home {
+    padding-top: 140px;
+    margin-top: 0;
   }
 }
 
@@ -690,34 +709,34 @@ html {
 .nav-link {
   color: #2F3C4E;
   text-decoration: none;
-  font-size: 1.1rem;
   font-weight: 500;
+  font-size: 1.1rem;
   transition: all 0.3s ease;
   position: relative;
-  padding: 5px 0;
+}
+
+.navbar.scrolled .nav-link {
+  color: #822439;
 }
 
 .nav-link::after {
   content: '';
   position: absolute;
-  bottom: 0;
+  bottom: -5px;
   left: 0;
   width: 0;
   height: 2px;
-  background-color: #822439;
+  background: #822439;
   transition: width 0.3s ease;
 }
 
-.nav-link:hover::after {
-  width: 100%;
-}
-
-.navbar.scrolled .nav-link {
-  color: white;
-}
-
 .navbar.scrolled .nav-link::after {
-  background-color: white;
+  background: #822439;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
 }
 
 .navbar.scrolled .router-link-active {
@@ -730,7 +749,7 @@ html {
 
 .page-section {
   min-height: 100vh;
-  padding: 80px 0;
+  padding: 5px 0;
   opacity: 0;
   transform: translateY(30px);
   transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
@@ -752,5 +771,88 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* Mobil Görünüm Ayarlamaları */
+@media (max-width: 768px) {
+  .main-content {
+    padding-top: 120px; /* Mobil navbar yüksekliğine göre ayarlandı */
+  }
+
+  #home {
+    /* Mobil #home stilleri kaldırıldı, boşluk main-content tarafından yönetiliyor */
+    margin-top: 0; /* Varsayılan negatif margin'i sıfırla */
+    padding-top: 0; /* Varsayılan padding'i sıfırla */
+  }
+
+  /* Diğer mobil stiller */
+  .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      padding: 30px 0;
+      background: rgba(130, 36, 57, 0.95); /* Mobil görünümde navbar arka planı kırmızı */
+    }
+
+    .mobile-menu-btn {
+      display: flex;
+    }
+
+    .nav-links {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 100%;
+      height: 100vh;
+      background: rgba(130, 36, 57, 0.98);
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      transition: right 0.3s ease;
+      z-index: 1000;
+    }
+
+    .nav-links.active {
+      right: 0;
+    }
+
+    .nav-links.active ~ .mobile-menu-btn span {
+      background: #ffffff !important;
+    }
+
+    .nav-link {
+      color: white !important;
+      font-size: 1.3rem;
+    }
+
+    .navbar.scrolled .nav-link {
+      color: white !important;
+    }
+
+    .nav-link::after {
+      background: white !important;
+    }
+
+    .mobile-menu-btn span {
+      background: #ffffff;
+    }
+
+    .navbar.scrolled .mobile-menu-btn span {
+      background: rgba(130, 36, 57, 0.95);
+    }
+
+    .mobile-menu-btn.active span:nth-child(1) {
+      transform: rotate(45deg) translate(8px, 8px);
+    }
+
+    .mobile-menu-btn.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .mobile-menu-btn.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -7px);
+    }
 }
 </style>

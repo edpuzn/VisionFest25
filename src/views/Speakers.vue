@@ -45,81 +45,84 @@ export default {
     return {
       speakers: [
         {
-          name: 'Ahmet ŞEKER',
-          title: 'Bilişim Uzmanı ve Akademisyen',
-          image: require('@/assets/Ahmet_Seker.jpeg'),
-          tags: ['Yapay Zeka', 'Akademi', 'Bilişim'],
-          bio: [
-            'Gazi Üniversitesi\'nde yapay zeka üzerine yüksek lisans yapmış, şu anda doktora çalışmalarına büyük dil modelleri ve blokzincir üzerine devam etmektedir. Ankara Üniversitesi ve Hacı Bayram Veli Üniversitesi\'nde dersler vermektedir.'
-          ],
-          linkedin: 'https://linkedin.com/in/ahmetseker',
-          twitter: 'https://twitter.com/ahmetseker'
-        },
-        {
-          name: 'Burak AYTAN',
-          title: 'Endüstri Mühendisi, TOFAŞ',
-          image: require('@/assets/Burak_Aytan.jpeg'),
-          tags: ['Endüstri', 'Mühendislik', 'Kalite'],
-          bio: [
-            'İstanbul Teknik Üniversitesi Endüstri Mühendisliği Bölümü mezunu olup, aynı üniversitede Yönetim Mühendisliği alanında yüksek lisans yapmıştır. TOFAŞ\'ta Kalite Metot ve Planlama Yöneticisi olarak görev yapmaktadır.'
-          ],
-          linkedin: 'https://linkedin.com/in/burakaytan',
-          twitter: 'https://twitter.com/burakaytan'
-        },
-        {
-          name: 'Can GÖYMEN',
-          title: 'Artiwise CEO',
-          image: require('@/assets/Can_Goymen.jpeg'),
-          tags: ['Girişimcilik', 'Yazılım', 'İnovasyon'],
-          bio: [
-            'Yıldız Teknik Üniversitesi Matematik Mühendisliği mezunu olup, Doğuş Üniversitesi\'nde MBA yapmıştır. Toyota ve Turkcell Global Bilgi\'de deneyim kazanmış, yapay zeka ve doğal dil işleme teknolojileriyle müşteri deneyimini iyileştiren Artiwise\'ı kurmuştur.'
-          ],
-          linkedin: 'https://linkedin.com/in/cangoymen',
-          twitter: 'https://twitter.com/cangoymen'
-        },
-        {
-          name: 'Kaan YENİYOL',
-          title: 'Teknoloji ve İnovasyon Lideri',
-          image: require('@/assets/Kaan_Yeniyol.jpeg'),
-          tags: ['Teknoloji', 'İnovasyon', 'Strateji'],
-          bio: [
-            'Doğu Akdeniz Üniversitesi Bilgisayar Mühendisliği mezunu olup, teknoloji ve inovasyon dünyasında stratejik danışmanlık hizmetleriyle öne çıkan bir liderdir. Alzmir Hub ve BSP Group ile yapay zeka stratejileri ve dijital dönüşüm projelerinde çalışmaktadır.'
-          ],
-          linkedin: 'https://linkedin.com/in/kaanyeniyol',
-          twitter: 'https://twitter.com/kaanyeniyol'
-        },
-        {
-          name: 'Kübra BİLGİC',
-          title: 'Teknoloji Danışmanı, eski Microsoft Yöneticisi',
+          name: 'Kübra BİLĞİÇ',
+          title: 'Developer Relations Manager, Huawei',
           image: require('@/assets/Kubra_Bilgic.jpeg'),
-          tags: ['Teknoloji', 'Danışmanlık', 'Microsoft'],
+          tags: ['Developer Relations', 'Topluluk Yönetimi', 'Sosyal Medya', 'Podcast'],
           bio: [
-            'ODTÜ Elektronik Mühendisliği mezunu olup, 30 yıllık bilgi teknolojileri kariyerinin 20 yılını yurt dışında geçirmiştir. Microsoft\'ta Suudi Arabistan Batı Bölgesi Projeler Koordinatörlüğü yapmış, şu anda teknoloji danışmanlığı hizmeti vermektedir.'
+            'Eskişehir Osmangazi Üniversitesi İşletme Bölümü mezunu olup (2013-2017), Nuh Naci Yazgan Üniversitesi\'nde Ekonomi yüksek lisansını tamamlamıştır (2018-2021). Şu anda Huawei\'de Developer Relations Manager olarak görev yapmakta ve HSD Türkiye öğrenci kulübünü yönetmektedir. Daha önce Kodluyoruz ve Patika.dev gibi platformlarda topluluk yönetimi deneyimi kazanmıştır. DevRelism Podcast ve Ege\'ye Taşınıyor Muyuz? Podcast projelerinde de yer almaktadır. Topluluk yönetimi, sosyal medya stratejileri ve geliştirici ilişkileri konularında uzmanlaşmıştır.'
           ],
-          linkedin: 'https://linkedin.com/in/kubrabilgic',
-          twitter: 'https://twitter.com/kubrabilgic'
+          linkedin: 'https://www.linkedin.com/in/kubrabilgic/'
+        },
+        {
+          name: 'Ahmet ŞEKER',
+          title: 'Cloud Project Manager & Technical Lead, Huawei',
+          image: require('@/assets/Ahmet_Seker.jpeg'),
+          tags: ['Cloud Computing', 'Network Engineering', 'IT', 'Bilişim'],
+          bio: [
+            'Bahçeşehir Üniversitesi Bilgisayar Mühendisliği mezunudur (2006-2012). 11 yılı aşkın süredir Huawei\'de çalışmakta olup, şu anda Cloud Project Manager ve Technical Lead pozisyonunda görev yapmaktadır. Daha önce Cloud Solution Engineer ve Senior Network Engineer olarak çalışmıştır. Multinet ve Kuysoft gibi şirketlerde de IT deneyimi bulunmaktadır. Cloud computing ve network engineering alanlarında uzmanlaşmış bir bilişim profesyonelidir.'
+          ],
+          linkedin: 'https://www.linkedin.com/in/ahmet-kayhan-şeker-2a9b2966/'
         },
         {
           name: 'Murat ÇELİK',
-          title: 'Monster Notebook ve Semruk Games Kurucusu',
+          title: 'Danışman, DİAS Teknoloji',
           image: require('@/assets/Murat_Celik.jpeg'),
-          tags: ['Girişimcilik', 'Oyun', 'Teknoloji'],
+          tags: ['Dijital Dönüşüm', 'Fintech', 'Oyun', 'İnovasyon'],
           bio: [
-            'Marmara Üniversitesi mezunu olup, 2000 yılında Fokus Bilgisayar\'ı kurmuştur. Monster Notebook markasıyla Türkiye\'de oyun bilgisayarı pazarında ilk 3 sırada yer alan şirketin kurucusudur. Semruk Games ile sosyal farkındalık projeleri geliştirmektedir.'
+            'Boğaziçi Üniversitesi Bilgisayar Mühendisliği mezunudur (1985-1992). Şu anda DİAS Teknoloji\'de Danışman olarak görev yapmaktadır. Daha önce Rotta Finansal Teknolojiler\'de CEO, Vourlabs Games\'de Kurucu Ortak ve DenizBank\'ta CDO - Digital Generation Banking EVP olarak çalışmıştır. DenizBank\'ın "Dünyanın En İnovatif Bankası" seçilmesinde önemli rol oynamıştır. Dijital dönüşüm, fintech ve oyun teknolojileri alanlarında uzmanlaşmış bir teknoloji lideridir.'
           ],
-          linkedin: 'https://linkedin.com/in/muratcelik',
-          twitter: 'https://twitter.com/muratcelik'
+          linkedin: 'https://www.linkedin.com/in/muratcelik68/'
+        },
+        {
+          name: 'Kaan YENİYOL',
+          title: 'Cyber Security & Incident Responder, Türk Telekom',
+          image: require('@/assets/Kaan_Yeniyol.jpg'),
+          tags: ['Siber Güvenlik', 'Adli Bilişim', 'Olay Müdahale', 'Güvenlik'],
+          bio: [
+            'Fırat Üniversitesi Adli Bilişim Mühendisliği mezunu olup (2014-2019), aynı üniversitede yüksek lisansını tamamlamıştır (2019-2021). 5 yılı aşkın süredir Türk Telekom\'da Siber Güvenlik ve Olay Müdahale uzmanı olarak görev yapmaktadır. Daha önce InitAck\'te Adli Bilişim Mühendisi olarak çalışmıştır. Siber güvenlik, adli bilişim ve olay müdahale konularında uzmanlaşmıştır.'
+          ],
+          linkedin: 'https://www.linkedin.com/in/kaanyeniyol/'
+        },
+        {
+          name: 'Büşra AYTEKİN KAYA',
+          title: 'Cyber Security Analyst, Türk Telekom',
+          image: require('@/assets/Busra_Kaya.jpg'),
+          tags: ['Siber Güvenlik', 'Adli Bilişim', 'DFIR', 'Güvenlik'],
+          bio: [
+            'Fırat Üniversitesi Adli Bilişim Mühendisliği mezunu olup (2015-2019), aynı üniversitede yüksek lisansını tamamlamıştır (2019-2022). 4 yılı aşkın süredir Türk Telekom\'da Cyber Security Analyst olarak görev yapmaktadır. Daha önce ADEO\'da DFIR Analyst ve Digisecure\'da Dijital Forensics Investigator olarak çalışmıştır. Siber güvenlik, dijital adli bilişim ve olay müdahale konularında uzmanlaşmıştır.'
+          ],
+          linkedin: 'https://www.linkedin.com/in/büşra-aytekin-kaya-50330311b/'
+        },
+        {
+          name: 'Burak AYTAN',
+          title: 'Principal AI & ML Engineer, Turkcell Technology',
+          image: require('@/assets/Burak_Aytan.jpeg'),
+          tags: ['Yapay Zeka', 'Doğal Dil İşleme', 'Makine Öğrenmesi', 'Otomasyon'],
+          bio: [
+            'Gazi Üniversitesi Elektrik-Elektronik Mühendisliği mezunu olup (2002-2007), University of Glamorgan\'da Bilgisayar Bilimleri yüksek lisansı (2008-2009) ve Bahçeşehir Üniversitesi\'nde Bilgisayar Mühendisliği doktorasını tamamlamıştır (2019-2024). 14 yılı aşkın süredir Turkcell\'de çalışmakta olup, şu anda Turkcell Technology\'de Principal AI & ML Engineer olarak görev yapmaktadır. Doğal dil işleme, yapay zeka ve makine öğrenmesi alanlarında uzmanlaşmıştır.'
+          ],
+          linkedin: 'https://www.linkedin.com/in/burak-aytan-ph-d-a036a122/'
+        },
+        {
+          name: 'Can GÖYMEN',
+          title: 'CEO, Curiosity Technology',
+          image: require('@/assets/Can_Goymen.jpeg'),
+          tags: ['Yapay Zeka', 'Ürün Yönetimi', 'Agile', 'DevOps'],
+          bio: [
+            'Bülent Ecevit Üniversitesi Matematik Bölümü mezunu olup (2001-2007), Üsküdar Üniversitesi\'nde Yapay Zeka Mühendisliği yüksek lisansını tamamlamıştır (2021-2022). Curiosity Technology\'nin kurucusu ve CEO\'sudur. Daha önce Turkcell\'de Product Owner ve ZekAI Proje Lideri olarak çalışmış, yapay zeka ve makine öğrenmesi projelerinde liderlik yapmıştır. Türk Telekom ve Vodafone\'da da ürün yönetimi, iş analizi ve takım liderliği deneyimleri bulunmaktadır. Yapay zeka, ürün yönetimi ve agile metodolojiler konularında uzmanlaşmıştır.'
+          ],
+          linkedin: 'https://www.linkedin.com/in/cangoymen/'
         },
         {
           name: 'Sertay KABUK',
-          title: 'Mecostech Kurucusu, VR/AR Teknolojileri Uzmanı',
+          title: 'Principal Software Developer, Doğuş Teknoloji',
           image: require('@/assets/Sertay_Kabuk.jpeg'),
-          tags: ['VR/AR', 'Teknoloji', 'Girişimcilik'],
+          tags: ['Yazılım Geliştirme', 'Chatbot', 'AI Agents', 'Mikroservis'],
           bio: [
-            'Uludağ Üniversitesi mezunu bir teknoloji girişimcisidir. Mecostech firması bünyesinde VR, AR ve XR tabanlı havacılık, lojistik ve sağlık teknolojileri alanında projeler geliştirmekte, yapay zekâ destekli yazılım çözümleri sunmaktadır.'
+            'Kadir Has Üniversitesi Bilgisayar Programcılığı ön lisans (2007-2009) ve Anadolu Üniversitesi lisans mezunudur (2010-2012). Şu anda Doğuş Teknoloji\'de Principal Software Developer olarak görev yapmaktadır. Daha önce D-Smart\'ta Software Development Manager ve Supervisor olarak 6 yıl, StreamDelta\'da Team Lead olarak çalışmıştır. TM Forum uyumlu dinamik teklif motoru, mikroservis mimarisi ve sürekli entegrasyon sistemleri konularında uzmanlaşmış bir yazılım geliştiricidir.'
           ],
-          linkedin: 'https://linkedin.com/in/sertaykabuk',
-          twitter: 'https://twitter.com/sertaykabuk'
+          linkedin: 'https://www.linkedin.com/in/sertay/'
         }
       ]
     }
@@ -130,7 +133,6 @@ export default {
 <style scoped>
 .speakers-page {
   padding: 120px 0;
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
   min-height: 100vh;
 }
 
@@ -197,7 +199,7 @@ h2::after {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
   position: relative;
-  height: 300px;
+  height: auto;
 }
 
 .speaker-card:hover {
@@ -207,7 +209,8 @@ h2::after {
 
 .speaker-image {
   flex: 0 0 300px;
-  height: 100%;
+  width: 300px;
+  height: auto;
   overflow: hidden;
   position: relative;
 }
@@ -216,6 +219,7 @@ h2::after {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   transition: transform 0.3s ease;
 }
 
@@ -258,7 +262,7 @@ h2::after {
 
 .speaker-info {
   flex: 1;
-  padding: 30px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -303,11 +307,6 @@ h2::after {
   font-size: 1rem;
   margin-bottom: 10px;
   font-family: 'Poppins', sans-serif;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 @media (max-width: 768px) {
@@ -330,17 +329,37 @@ h2::after {
   }
 
   .speaker-card {
+    padding: 20px;
+    display: flex;
     flex-direction: column;
-    height: auto;
+    align-items: center;
+    text-align: center;
   }
 
   .speaker-image {
-    flex: 0 0 250px;
-    height: 250px;
+    width: 80%;
+    max-width: 350px;
+    height: auto;
+    margin: 0 auto 20px auto;
+  }
+
+  .speaker-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   .speaker-info {
-    padding: 20px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .speaker-tags {
+    justify-content: center;
+  }
+
+  .speaker-links {
+    justify-content: center;
   }
 
   .speaker-info h3 {
@@ -351,12 +370,18 @@ h2::after {
     font-size: 1rem;
   }
 
-  .tag {
+  .tags {
+    justify-content: center;
+  }
+
+  .tags .tag {
     font-size: 0.8rem;
   }
 
   .bio {
     font-size: 0.9rem;
+    -webkit-line-clamp: unset;
+    max-height: unset;
   }
 }
 </style> 

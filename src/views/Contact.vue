@@ -1,300 +1,169 @@
 <template>
-  <div class="contact-page">
-    <div class="container">
-      <h2 class="section-title">İLETİŞİM</h2>
-      <p class="section-subtitle">Bizimle İletişime Geçin</p>
-      <div class="contact-content">
-        <div class="contact-info">
-          <div class="info-card">
-            <i class="fas fa-map-marker-alt"></i>
+  <div class="contact-container">
+    <div class="contact-content">
+      <div class="contact-info">
+        <h2>İletişim</h2>
+        <div class="info-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <div class="info-content">
             <h3>Adres</h3>
-            <p>Fırat Üniversitesi, Rektörlük Kampüsü<br>23119 Elazığ, Türkiye</p>
-          </div>
-          <div class="info-card">
-            <i class="fas fa-envelope"></i>
-            <h3>E-posta</h3>
-            <p>info@firatvisionfest.com</p>
-          </div>
-          <div class="info-card">
-            <i class="fas fa-phone"></i>
-            <h3>Telefon</h3>
-            <p>+90 (424) 237 00 00</p>
-          </div>
-        </div>
-        <div class="contact-cta">
-          <div class="cta-content">
-            <h2>Etkinliğe Katılmak İster misiniz?</h2>
-            <p>Hemen başvurun ve geleceğin teknolojilerini keşfetmeye başlayın!</p>
-            <a href="https://linktr.ee/hsdfirat" class="cta-button" target="_blank">
-              <i class="fas fa-paper-plane"></i>
-              <span>BAŞVUR</span>
+            <p>Nurettin Ardıçoğlu Kampüsü</p>
+            <a href="https://maps.app.goo.gl/8QZQZQZQZQZQZQZQZ" target="_blank" class="map-link">
+              <i class="fas fa-map"></i> Haritada Göster
             </a>
           </div>
         </div>
+        <div class="info-item">
+          <i class="fas fa-envelope"></i>
+          <div class="info-content">
+            <h3>E-posta</h3>
+            <a href="mailto:huaweidevgroup23@gmail.com">huaweidevgroup23@gmail.com</a>
+          </div>
+        </div>
+      </div>
+      <div class="map-container">
+        <iframe
+          src="https://maps.google.com/maps?q=Prof.+Dr.+Mustafa+Temizer+Konferans+Salonu,+Fırat+%C3%9Cniversitesi,+Elaz%C4%B1%C4%9F&output=embed"
+          width="100%"
+          height="100%"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+/* eslint-disable */
 export default {
-  name: 'ContactPage',
-  data() {
-    return {
-      form: {
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
-      }
-    }
-  },
-  methods: {
-    handleSubmit() {
-      // Form gönderme işlemi burada yapılacak
-      console.log('Form submitted:', this.form)
-      // Form alanlarını temizle
-      this.form = {
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
-      }
-    }
-  }
+  name: 'Contact'
 }
 </script>
 
 <style scoped>
-.contact-page {
-  padding: 80px 0;
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-}
+.contact-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  width: 100%; /* Tam genişlik kullan */
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-h2 {
-  text-align: center;
-  color: #2F3C4E;
-  font-size: 3.5rem;
-  font-weight: 700;
-  margin-bottom: 20px;
-  font-family: 'Poppins', sans-serif;
-  position: relative;
-  display: inline-block;
-  left: 50%;
-  transform: translateX(-50%);
-  letter-spacing: 1px;
-  background: linear-gradient(135deg, #2F3C4E 0%, #822439 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-h2::after {
-  content: '';
-  position: absolute;
-  bottom: -15px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 3px;
-  background: #822439;
-  border-radius: 3px;
-}
-
-.section-subtitle {
-  text-align: center;
-  color: #2F3C4E;
-  font-size: 1.2rem;
-  margin-bottom: 60px;
-  opacity: 0.8;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 400;
-  letter-spacing: 0.5px;
-  margin-top: 30px;
 }
 
 .contact-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 50px;
-  margin-top: 40px;
-}
-
-.contact-info {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-}
-
-.info-card {
+  gap: 0; /* Boşluk kaldırıldı */
+  max-width: 1400px; /* Genişlik artırıldı */
+  width: 100%;
   background: white;
-  padding: 30px;
-  border-radius: 15px;
+  border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  transition: all 0.3s ease;
-  border: 1px solid rgba(130, 36, 57, 0.1);
-}
-
-.info-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-}
-
-.info-card i {
-  font-size: 2.5rem;
-  color: #822439;
-  margin-bottom: 20px;
-}
-
-.info-card h3 {
-  color: #2F3C4E;
-  font-size: 1.3rem;
-  margin-bottom: 15px;
-  font-weight: 600;
-  font-family: 'Poppins', sans-serif;
-}
-
-.info-card p {
-  color: #2F3C4E;
-  font-size: 1.1rem;
-  line-height: 1.6;
-  font-family: 'Poppins', sans-serif;
-}
-
-.contact-cta {
-  background: linear-gradient(135deg, #822439 0%, #c41e3a 100%);
-  border-radius: 15px;
-  padding: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white;
-  box-shadow: 0 10px 30px rgba(130, 36, 57, 0.2);
-  position: relative;
   overflow: hidden;
 }
 
-.contact-cta::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(45deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
-  z-index: 1;
-}
-
-.cta-content {
-  position: relative;
-  z-index: 2;
-}
-
-.cta-content h2 {
-  font-size: 1.8rem;
-  margin-bottom: 20px;
-  font-weight: 600;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+.contact-info {
+  padding: 40px;
+  background: #822439;
   color: white;
+  height: 100%; /* Yüksekliği tam kapla */
+  display: flex; /* İçeriği düzenlemek için flex kullanabiliriz */
+  flex-direction: column;
+  justify-content: center; /* İçeriği dikeyde ortala */
 }
 
-.cta-content p {
-  font-size: 1.1rem;
+.contact-info h2 {
+  font-size: 2rem;
   margin-bottom: 30px;
-  opacity: 0.9;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  font-weight: 600;
 }
 
-.cta-button {
-  background-color: white;
-  color: #822439;
-  padding: 15px 40px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: 600;
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.info-item i {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.info-content h3 {
   font-size: 1.2rem;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.info-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.info-content a {
+  color: white;
+  text-decoration: none;
   transition: all 0.3s ease;
+}
+
+.info-content a:hover {
+  opacity: 0.8;
+}
+
+.map-link {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  border: 2px solid white;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  gap: 8px;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  margin-top: 10px;
 }
 
-.cta-button i {
-  font-size: 1.2rem;
-  transition: transform 0.3s ease;
+.map-link:hover {
+  background: rgba(255, 255, 255, 0.2);
 }
 
-.cta-button:hover {
-  background-color: transparent;
-  color: white;
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+.map-container {
+  width: 100%;
+  height: 100%; /* Yüksekliği tam kapla */
+  min-height: 400px; /* Minimum yükseklik */
 }
 
-.cta-button:hover i {
-  transform: translateX(5px);
+.map-container iframe {
+  border-radius: 0 20px 20px 0; /* Sağ köşeleri yuvarlak yap */
+  display: block; /* İframe'in tam genişlik almasını sağla */
 }
 
 @media (max-width: 768px) {
-  .contact-page {
-    padding: 60px 0;
-  }
-
-  h2 {
-    font-size: 2rem;
-    margin-bottom: 40px;
-  }
-
   .contact-content {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 0; /* Mobil görünümde de boşluğu kaldır */
   }
 
   .contact-info {
-    grid-template-columns: 1fr;
+    padding: 30px;
+    height: auto; /* Mobil görünümde yüksekliği otomatik yap */
   }
 
   .info-card {
     padding: 20px;
   }
 
-  .info-card i {
-    font-size: 2rem;
+  .map-container {
+    min-height: 300px; /* Mobil için minimum yükseklik */
+    height: auto; /* Mobil görünümde yüksekliği otomatik yap */
   }
 
-  .info-card h3 {
-    font-size: 1.2rem;
-  }
-
-  .info-card p {
-    font-size: 1rem;
-  }
-
-  .contact-cta {
-    padding: 30px;
-  }
-
-  .cta-content h2 {
-    font-size: 1.5rem;
-  }
-
-  .cta-content p {
-    font-size: 1rem;
-  }
-
-  .cta-button {
-    padding: 12px 30px;
-    font-size: 1.1rem;
+  .map-container iframe {
+    border-radius: 0 0 20px 20px; /* Mobil görünümde alt köşeleri yuvarlak yap */
+    display: block;
   }
 }
 </style> 
