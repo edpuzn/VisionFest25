@@ -347,7 +347,7 @@ html {
 }
 
 .logo img {
-  height: 50px;
+  height: 100px;
   transition: all 0.3s ease;
 }
 

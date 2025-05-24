@@ -7,12 +7,12 @@
         <div class="partner-card">
           <img src="@/assets/GSB.png" alt="gsb" />
           <h3>Gençlik ve Spor Bakanlığı</h3>
-          <p>Platin Paydaş</p>
+          <p>Ana Paydaş</p>
         </div>
         <div class="partner-card">
           <img src="@/assets/UNIDES.png" alt="Dias Curiosity" />
           <h3>ÜNİDES</h3>
-          <p>Platin Paydaş</p>
+          <p>Ana Paydaş</p>
         </div>
         <div class="partner-card">
           <img src="@/assets/firat.png" alt="Fırat Üniversitesi" />
