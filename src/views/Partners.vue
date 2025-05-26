@@ -83,7 +83,7 @@
           <p>Catering Sponsorluğu</p>
         </div>
         <div class="partner-card">
-          <img src="@/assets/Pizza.png" alt="Pizza" />
+          <img src="@/assets/Pizza.jpg" alt="Pizza" />
           <h3>L'italiano Pizza</h3>
           <p>Catering Sponsorluğu</p>
         </div>
