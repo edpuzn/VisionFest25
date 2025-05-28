@@ -63,11 +63,6 @@
           <p>Ana Sponsor</p>
         </div>
         <div class="partner-card">
-          <img src="@/assets/oxford.jpg" alt="oxford" />
-          <h3>Oxford Dil Akademisi</h3>
-          <p>Altın Sponsor</p>
-        </div>
-        <div class="partner-card">
           <img src="@/assets/Luuq.png" alt="LUUQ" />
           <h3>Luuq</h3>
           <p>Catering Sponsorluğu</p>
