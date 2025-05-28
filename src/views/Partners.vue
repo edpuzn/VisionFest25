@@ -68,6 +68,11 @@
           <p>Catering Sponsorluğu</p>
         </div>
         <div class="partner-card">
+          <img src="@/assets/kafayıf.png" alt="Kadayıf" />
+          <h3>Kadayıfçı Murat Usta</h3>
+          <p>Tatlı Sponsorluğu</p>
+        </div>
+        <div class="partner-card">
           <img src="@/assets/Luna.jpg" alt="luna" />
           <h3>Luna Makarna</h3>
           <p>Catering Sponsorluğu</p>
