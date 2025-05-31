@@ -35,8 +35,8 @@
           <p>Platin Paydaş</p>
         </div>
         <div class="partner-card">
-          <img src="@/assets/dias.png" alt="Dias Curiosity" />
-          <h3>Dias Curiosity</h3>
+          <img src="@/assets/dias.png" alt="Dias Technology" />
+          <h3>Dias Technology</h3>
           <p>Platin Paydaş</p>
         </div>
         <div class="partner-card">
