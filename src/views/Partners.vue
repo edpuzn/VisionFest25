@@ -40,6 +40,11 @@
           <p>Platin Paydaş</p>
         </div>
         <div class="partner-card">
+          <img src="@/assets/CuriosityLogo.JPEG" alt="Curiosity" />
+          <h3>Curiosity Technology</h3>
+          <p>Platin Paydaş</p>
+        </div>
+        <div class="partner-card">
           <img src="@/assets/turk-telekom.png" alt="Türk Telekom" />
           <h3>Türk Telekom</h3>
           <p>Platin Paydaş</p>
